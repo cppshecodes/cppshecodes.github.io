@@ -68,7 +68,7 @@ a {
 	
 /*INDIVIDUAL PAGES*/
 	
-#home, .page {
+#home{
 	background: transparent;
 	width: 100%;
 	min-height: 100vh;
@@ -76,6 +76,10 @@ a {
 }
 
 .page {
+	background: transparent;
+	width: 100%;
+	min-height: 50vh;
+	position: relative;
 	margin-bottom: 75px;
 	text-align: justify;
 }
@@ -150,6 +154,27 @@ a {
 		background: #ffffff;
 		padding: 20px;
 	}
+	
+	.schedule h3 {
+		text-align: center;
+	}
+	
+	.schedule button {
+		background: #df0f7a;
+		border: none;
+		border-radius: 5px;
+		font-size: 15pt;
+		color: #ffffff;
+		padding: 4px 8px;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+			transition: all 0.2s ease-in-out;
+	}
+	
+		.schedule button:hover {
+			background: #070707;
+		}
 	
 .title {
 	padding: 100px 0px 50px 50px;
