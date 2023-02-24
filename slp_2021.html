@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Semester Long Project</title>
+
+<meta charset="utf-8">
+<link rel="shortcut icon" type="image/jpg" href="images/logo.png"/>
+
+<!--[if lte IE 8]>-->
+    <script src="html5.js" type="text/javascript"></script>
+<!--[endif]-->
+
+<!--Google Fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Open+Sans&display=swap" rel="stylesheet">
+
+<!--Font Awesome Extension-->
+<script src="https://kit.fontawesome.com/fb25db8e8c.js" crossorigin="anonymous"></script>
+
+<!--CSS Extensions-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="css/slp-custom.css">
+
+<!--jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+</head>
+<body>
+
+<!--------SIDEBAR--------->
+<div class="row g-0 col-md-2 d-none d-md-block"> <!--hides sidebar on mobile screen-->
+<nav id="sidebar" class="col-md-2">
+	<!-- Sidebar Header -->
+		<div id="sidebarHeader">
+			<span onclick="window.location.href='slp.html'">SLP</span></br>
+			<div id="tagline">Semester Long Project</div>
+		</div>
+		
+	<!-- Sidebar Links -->
+	<div class="links">
+		<ul class="list-unstyled components">
+			<li class="active">
+				<a href="https://www.cpp.edu/~shecodes/">
+					<div class="icon"><div style="margin-top: -2px;"><i class="fab fa-pagelines"></i></div></div>
+					<button>sheCodes</button>
+				</a>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-top: -2px;"><i class="fas fa-book"></i></div></div>
+				<button class="tablinks" onclick="openPage(event, 'about')">About SLP</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2022.html'">SLP Fall 2022</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2020.html'">SLP Fall 2020</button>
+			</li>
+			<li><!-- Link with dropdown items -->
+				<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+					<div class="icon"><div style="margin-top: -2px;"><i class="fas fa-chevron-down"></i></div></div>
+					<button class="tablinks" onclick="openPage(event, 'all')">All Projects</button>
+				</a>
+				<ul class="list-unstyled groups">
+					<li><button class="tablinks" onclick="openPage(event, 'group1')">League of LeShen</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group2')">Artificial Intelligence</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group3')">Wanderlust</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group4')">sheStudies</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group5')">Book Exchange</button></li>
+                    <li><button class="tablinks" onclick="openPage(event, 'group6')">California Wildfire App</button></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+</div><!--sidebar-->
+
+<!--------TOPBAR for mobile--------->
+<div class="d-none d-sm-block d-sm-none d-md-none d-lg-none d-xl-none">
+<nav id="mobileNav">
+	<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+		<div class="mobile-header">
+			<div class="icon m"><div style="margin-top: 4px;"><i class="fas fa-bars"></i></div></div>
+			Semester Long Project
+		</div>
+	</a>
+		<ul class="collapse list-unstyled" id="homeSubmenu">
+			<li><a href="https://www.cpp.edu/~shecodes/">
+					<div class="icon"><div style="margin-top: -6px;"><i class="fab fa-pagelines"></i></div></div>
+					<button class="removeBorder">sheCodes</button>
+				</a></li>
+			<li>
+			<li>
+				<div class="icon"><div style="margin-top: -7px;"><i class="fas fa-book"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'about')">About SLP</button>
+			</li>
+				<div class="icon"><div style="margin-top: -5px;"><i class="fas fa-chevron-down"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'all')">All Projects</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2022.html'">SLP Fall 2022</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2020.html'">SLP Fall 2020</button>
+			</li>
+			<div class="indent row">
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group1')">League of LeShen</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group2')">Artificial Intelligence</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group3')">Wanderlust</button></li>
+				</div>
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group4')">sheStudies</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group5')">Book Exchange</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group6')">California Wildfire App</button></li>
+				</div>
+			</div>
+		</ul>
+</nav>
+</div>
+
+<!--really roundabout way to show on xs screen-->
+<div class="d-block d-sm-none">
+<nav id="mobileNav">
+	<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+		<div class="mobile-header">
+			<div class="icon m"><div style="margin-top: 4px;"><i class="fas fa-bars"></i></div></div>
+			Semester Long Project
+		</div>
+	</a>
+		<ul class="collapse list-unstyled" id="homeSubmenu">
+			<li><a href="https://www.cpp.edu/~shecodes/">
+					<div class="icon"><div style="margin-top: -6px;"><i class="fab fa-pagelines"></i></div></div>
+					<button class="removeBorder">sheCodes</button>
+				</a></li>
+			<li>
+			<li>
+				<div class="icon"><div style="margin-top: -7px;"><i class="fas fa-book"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'about')">About SLP</button>
+			</li>
+				<div class="icon"><div style="margin-top: -5px;"><i class="fas fa-chevron-down"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'all')">All Projects</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2022.html'">SLP Fall 2022</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2020.html'">SLP Fall 2020</button>
+			</li>
+			<div class="indent row">
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group1')">League of LeShen</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group2')">Artificial Intelligence</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group3')">Wanderlust</button></li>
+				</div>
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group4')">sheStudies</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group5')">Book Exchange</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group6')">California Wildfire App</button></li>
+				</div>
+			</div>
+		</ul>
+</nav>
+</div>
+
+<!--------CONTENT--------->
+<div class="d-none d-sm-block d-md-none d-lg-none d-xl-none" style="width: 100%; height: 75px;"></div> <!--adds space-->
+<div class="d-block d-sm-none" style="width: 100%; height: 75px;"></div> <!--adds space-->
+
+<div id="container" class="offset-md-3 col-md-8">
+
+<div id="all" class="tabcontent active">
+	<div class="row gy-5">
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/leshen_background.jpg') center; background-size: 200%;" class="cell tablinks" onclick="openPage(event, 'group1')">
+				<div class="projectName">League of LeShen<br /><span>Software Engineering Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/ai_background.jpg') center; background-size: 100%;" class="cell tablinks" onclick="openPage(event, 'group2')">
+				<div class="projectName">Artificial Intelligence<br /><span>Artificial Intelligence Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/wanderlust_background.png') center; background-size: 150%;" class="cell tablinks" onclick="openPage(event, 'group3')">
+				<div class="projectName">Wanderlust<br /><span>UI/UX Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/shestudies_background.jpg') center; background-size: 100%;" class="cell tablinks" onclick="openPage(event, 'group4')">
+				<div class="projectName">sheStudies<br /><span>Introduction to Coding Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/bookexchange_background.jpg') center; background-size: 150%" class="cell tablinks" onclick="openPage(event, 'group5')">
+				<div class="projectName">Book Exchange<br /><span>Mobile Application Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/california_background.png') center; background-size: 150%" class="cell tablinks" onclick="openPage(event, 'group5')">
+				<div class="projectName">California Wildfire App<br /><span>Mobile Application Team</span></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="about" class="tabcontent">
+	<div class="projectTitle"><h1>About SLP</h1></div>
+	<p> Semester-Long Projects (SLP) is a great program to enrich coding skills in a group setting. Participants
+		are formed into groups of similar interests. Each group is led by a mentor to build a unique coding project.
+		SLP includes workshops like git, inclusive design, and other topics to aid the project's completion. At the
+		end of the semester, the groups come together for sheCode's SLP Demo Day to showcase their project!
+	</p>
+	<br>
+	<h5>We congratulate every member and team lead on finishing SLP of 2022!</h5>
+	<p>
+		Thank you for your 10 weeks of teamwork and dedication! You have accomplished 
+		these past 10 weeks and should be proud of all the work you have done. We hope that SLP 
+		has encouraged you to explore more about Computer Science and inspires you to continue 
+		pursuing projects outside of class. We hope you had fun and learned a lot! 
+		sheCodes and sheBoard are so proud of you and we can’t wait to see where you will go from here.
+		<br>
+		-Laura Siu (she/her) sheCodes Internal Vice President 2022-2023
+	</p>
+	<br>
+	<h4>Judges for SLP 2022</h4>
+	<ul>
+		<li><h4>Daisy Tang</h4></li>
+		<li><h4>Markus Eger</h4></li>
+		<li><h4>Mohammad Husain</h4></li>
+		<li><h4>Lan Yang</h4></li>
+		<li><h4>Yu Sun</h4></li>
+	</ul>
+	<p> 
+		We would like to thank you judges for being a SLP Demo Day Judge! 
+		We appreciate you sharing your expertise and guidance with our members. 
+		On behalf of sheCodes, we sincerely thank you for taking the time to help 
+		create a meaningful experience for our SLP participants.
+	</p>
+</div>
+
+<div id="group1" class="tabcontent">
+	<div class="projectTitle"><h1>League of LeShen<br /><span>Software Engineering Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Liangjie Shen</h4></li>
+		<li>Trina Ngo</li>
+		<li>Erika Ledesma</li>
+		<li>Mohraiel Matta</li>
+		<li>Rosalu Wycoco</li>
+	</ul>
+	<h2>About the Project</h2>
+	<div class="videoWrapper" style="--aspect-ratio: 3 / 4;">
+		<iframe src="https://www.youtube.com/embed/XpVoylEt2b0"
+			frameborder="0" allow="accelerometer;
+			clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+	</div>
+	A game which includes both aspects of Genshin Impact and League of Legends. The player can choose a character to play and then
+	attack monsters in the open world.
+	<h2>Tools</h2>
+	<ul>
+		<li>HTML 5</li>
+		<li>CSS 3</li>
+		<li>Javascript</li>
+        <li>Sketchbook</li>
+		<li>Repl.it</li>
+	</ul>
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>More characters to use</li>
+		<li>More monsters</li>
+        <li>More skills to use</li>
+	</ul>
+</div>
+
+<div id="group2" class="tabcontent">
+	<div class="projectTitle"><h1>Artificial Intelligence<br /><span>Artificial Intelligence Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Alejandro Hernandez</h4></li>
+		<li>Rose Roldan</li>
+		<li>Sherelene De Belen</li>
+		<li>Laura Siu</li>
+		<li>Saul Barajas</li>
+		
+	</ul>
+	<h2>About the Project</h2>
+	<div class="image-wrapper">
+		<img src="./images/projects/ai.png" alt="image">
+	</div>
+	The team applied Search and Learning problems to various network datasets. They used Uninformed Search, Breadth First Search and Depth First Search.
+	<h2>Tools</h2>
+	<ul>
+		<li>NetworkX</li>
+		<li>NumPy</li>
+		<li>Pandas</li>
+		<li>MatPlotLib</li>
+	</ul>
+	<h2>What Was Learned</h2>
+		<ul>
+			<li>AI</li>
+			<li>Different Uses</li>
+			<li>Python</li>
+			<li>Not as scary as we thought</li>
+		</ul>
+	<h2>Given More Time...</h2>
+		<ul>
+			<li>Implement more complex models like logisitic regression</li>
+			<li>Implement gradient dscent variations/modifications</li>
+			<li>Implement more intelligent search algorithms like Dijkstra's and A</li>
+		</ul>
+</div>
+
+<div id="group3" class="tabcontent">
+	<div class="projectTitle"><h1>Wanderlust<br /><span>UI/UX Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Bernice Tran</h4></li>
+		<li>Amanda Chang</li>
+		<li>Allison Fung</li>
+		<li>Yemi Okunubi</li>
+		<li>Sneha Vivek</li>
+	</ul>
+	<h2>About the Project</h2>
+	<a href="https://www.figma.com/proto/6pTaKKggBi0g6kRytxjmvu/Wanderlust-Website?node-id=2%3A2&scaling=min-zoom&page-id=0%3A1">Link to Figma</a>
+	<p>Wanderlust is a travel helper website that helps anyone that needs to plan their next vacation. The UI/Ux SLP team has coded a survey that let's the user choose which destination they want to travel to and how long they plan to travel for. After doing so, users can select the given activities that are available.</p>
+	<h2>Tools</h2>
+	<ul>
+		<li>Figma</li>
+		<li>Github</li>
+		<li>HTML 5</li>
+		<li>CSS</li>
+		<li>JavaScript</li>
+	</ul>
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Github</li>
+		<li>Figma</li>
+		<li>Color theory and Typography</li>
+		<li>HTML/CSS with jQuery</li>
+	</ul>
+</div>
+
+<div id="group4" class="tabcontent">
+	<div class="projectTitle"><h1>sheStudies<br /><span>Introduction to Coding Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Irene Ninan</h4></li>
+		<li>Ceiara Madrigal</li>
+		<li>Tiffany Truong</li>
+		<li>Sean Chuang</li>
+		<li>Tyler Stamp - Programming</li>
+	</ul>
+	<h2>About the Project</h2>
+	<div class="videoWrapper" style="--aspect-ratio: 3 / 4;">
+		<iframe src="https://www.youtube.com/embed/Mf7SNPCkDuI"
+			frameborder="0" allow="accelerometer;
+			clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+	</div>
+	The intent of this project is to help college students who need organized resources, keep all their notes and flashcards in one website, make practice
+	quizzs to prep for exams, and customiz how the user want their work to look.
+	<h2>Tools</h2>
+	<ul>
+		<li>HTML 5</li>
+		<li>CSS</li>
+		<li>JavaScript</li>
+	</ul>
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Add other features</li>
+		<li>Allow more customization</li>
+	</ul>
+</div>
+
+<div id="group5" class="tabcontent">
+	<div class="projectTitle"><h1>Book Exchange<br /><span>Mobile Application Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Preni Amijanian</h4></li>
+		<li>Min Jung</li>
+		<li>Alma Campos</li>
+		<li>Karen Vuong</li>
+	</ul>
+	<h2>About the Project</h2>
+	<div class="videoWrapper" style="--aspect-ratio: 3 / 4;">
+		<iframe src="https://www.youtube.com/embed/aZ1v1AZa0cY"
+			frameborder="0" allow="accelerometer;
+			clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+	</div>
+	<h2>Tools</h2>
+		<ul>
+			<li>Google Flutter</li>
+			<li>Firebase</li>
+			<li>Android Studio</li>
+			<li>Dart</li>
+		</ul>
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Allow Users to know they are exchanging with</li>
+		<li>Have pictures of the books</li>
+	</ul>
+</div>
+
+<div id="group6" class="tabcontent">
+	<div class="projectTitle"><h1>California Wildfire App<br /><span>Mobile Application Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Sriya Kuruppath </h4></li>
+		<li>Julia Alfaro</li>
+		<li>UyenNghi Nguyen</li>
+		<li>Amber Thomas</li>
+		<li>Amrita Sneha Ramakrishnan</li>
+		<li>Jade Eng</li>
+	</ul>
+	<h2>About the Project</h2>
+	<div class="videoWrapper" style="--aspect-ratio: 3 / 4;">
+		<iframe src="https://www.youtube.com/embed/zMO_HnYV_ic"
+			frameborder="0" allow="accelerometer;
+			clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+	</div>
+	With the increase in fires in California, many residents are in danger due to the lack of adequate time or notice of exact location of impact, to evacuate their homes safely.
+	<h2>Tools</h2>
+		<ul>
+			<li>Figma</li>
+			<li>React Native</li>
+			<li>Kaggle</li>
+			<li>Colab</li>
+			<li>Github</li>
+		</ul>
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Team-oriented as there were roles delegated to each team member.</li>
+		<li>The team had to learn and use different resources to bring the app together.</li>
+		<li>Absence of an established work breakdown structure with dates and durations.</li>
+		<li>Bandwidth and capacity issues led to delays in completion.</li>
+	</ul>
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Add information about other disasters</li>
+		<li>User Notifications</li>
+	</ul>
+</div>
+</div> <!--content-->
+
+</div> <!--bootstrap-->
+
+
+<!--CREDIT-->
+<div id="creditDesktop" class="d-none d-md-block">
+	<div id="anchor">
+		<div style="margin-top: -3px;"><i class="fas fa-anchor"></i></div>
+	</div>
+	<div id="4thMonth">
+		<div style="font-size: 10pt; padding-top: 10px;">Coded with care by Bernice</div>
+	</div>
+</div>
+
+<div id="creditMobile" class="d-none d-sm-block d-sm-none d-md-none d-lg-none d-xl-none">
+	� 2023 <a href="https://www.cpp.edu/~shecodes/">sheCodes</a>
+	<br />
+	<small>Coded with care by Bernice Tran</small>
+</div>
+
+<div id="creditMobile" class="d-block d-sm-none">
+	� 2023 <a href="https://www.cpp.edu/~shecodes/">sheCodes</a>
+	<br />
+	<small>Coded with care by Bernice Tran</small>
+</div>
+
+</body>
+
+<!--Javascript-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!--javascript for the separate tabs-->
+<script type="text/javascript">
+	function openPage(evt, cityName) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+</script>
+
+</body>
+</html>

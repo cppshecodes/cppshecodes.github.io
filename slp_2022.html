@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Semester Long Project</title>
+
+<meta charset="utf-8">
+<link rel="shortcut icon" type="image/jpg" href="images/logo.png"/>
+
+<!--[if lte IE 8]>-->
+    <script src="html5.js" type="text/javascript"></script>
+<!--[endif]-->
+
+<!--Google Fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Open+Sans&display=swap" rel="stylesheet">
+
+<!--Font Awesome Extension-->
+<script src="https://kit.fontawesome.com/fb25db8e8c.js" crossorigin="anonymous"></script>
+
+<!--CSS Extensions-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="css/slp-custom.css">
+
+<!--jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+</head>
+<body>
+
+<!--------SIDEBAR--------->
+<div class="row g-0 col-md-2 d-none d-md-block"> <!--hides sidebar on mobile screen-->
+<nav id="sidebar" class="col-md-2">
+	<!-- Sidebar Header -->
+		<div id="sidebarHeader">
+			<span onclick="window.location.href='slp.html'">SLP</span></br>
+			<div id="tagline">Semester Long Project</div>
+		</div>
+		
+	<!-- Sidebar Links -->
+	<div class="links">
+		<ul class="list-unstyled components">
+			<li class="active">
+				<a href="https://www.cpp.edu/~shecodes/">
+					<div class="icon"><div style="margin-top: -2px;"><i class="fab fa-pagelines"></i></div></div>
+					<button>sheCodes</button>
+				</a>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-top: -2px;"><i class="fas fa-book"></i></div></div>
+				<button class="tablinks" onclick="openPage(event, 'about')">About SLP</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2021.html'">SLP Fall 2021</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2020.html'">SLP Fall 2020</button>
+			</li>
+			<li><!-- Link with dropdown items -->
+				<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+					<div class="icon"><div style="margin-top: -2px;"><i class="fas fa-chevron-down"></i></div></div>
+					<button class="tablinks" onclick="openPage(event, 'all')">All Projects</button>
+				</a>
+				<ul class="list-unstyled groups">
+					<li><button class="tablinks" onclick="openPage(event, 'group1')">To-Do List</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group2')">Change of Scenery</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group3')">Studio Notes</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group4')">sheCooks</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group5')">Artifical Intelligence</button></li>
+                    <li><button class="tablinks" onclick="openPage(event, 'group6')">Cinema</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group7')">DevOps</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group8')">Intro to ML</button></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+</div><!--sidebar-->
+
+<!--------TOPBAR for mobile--------->
+<div class="d-none d-sm-block d-sm-none d-md-none d-lg-none d-xl-none">
+<nav id="mobileNav">
+	<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+		<div class="mobile-header">
+			<div class="icon m"><div style="margin-top: 4px;"><i class="fas fa-bars"></i></div></div>
+			Semester Long Project
+		</div>
+	</a>
+		<ul class="collapse list-unstyled" id="homeSubmenu">
+			<li><a href="https://www.cpp.edu/~shecodes/">
+					<div class="icon"><div style="margin-top: -6px;"><i class="fab fa-pagelines"></i></div></div>
+					<button class="removeBorder">sheCodes</button>
+				</a></li>
+			<li>
+			<li>
+				<div class="icon"><div style="margin-top: -7px;"><i class="fas fa-book"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'about')">About SLP</button>
+			</li>
+				<div class="icon"><div style="margin-top: -5px;"><i class="fas fa-chevron-down"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'all')">All Projects</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2021.html'">SLP Fall 2021</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2020.html'">SLP Fall 2020</button>
+			</li>
+			<div class="indent row">
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group1')">Intro to Coding</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group2')">Change of Scenery</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group3')">Studio Notes</button></li>
+				</div>
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group4')">sheCooks</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group5')">Artificial Intelligence</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group6')">Cinema</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group7')">DevOps</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group8')">Intro to Machine Learning</button></li>				</div>
+				</div>
+		</ul>
+</nav>
+</div>
+
+<!--really roundabout way to show on xs screen-->
+<div class="d-block d-sm-none">
+<nav id="mobileNav">
+	<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+		<div class="mobile-header">
+			<div class="icon m"><div style="margin-top: 4px;"><i class="fas fa-bars"></i></div></div>
+			Semester Long Project
+		</div>
+	</a>
+		<ul class="collapse list-unstyled" id="homeSubmenu">
+			<li><a href="https://www.cpp.edu/~shecodes/">
+					<div class="icon"><div style="margin-top: -6px;"><i class="fab fa-pagelines"></i></div></div>
+					<button class="removeBorder">sheCodes</button>
+				</a></li>
+			<li>
+			<li>
+				<div class="icon"><div style="margin-top: -7px;"><i class="fas fa-book"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'about')">About SLP</button>
+			</li>
+				<div class="icon"><div style="margin-top: -5px;"><i class="fas fa-chevron-down"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'all')">All Projects</button>
+			</li>
+			<li>
+ 				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2021.html'">SLP Fall 2021</button>
+			</li>          
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2020.html'">SLP Fall 2020</button>
+			</li>
+			<div class="indent row">
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group1')">Intro to Coding</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group2')">Change of Scenery</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group3')">Studio Notes</button></li>
+				</div>
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group4')">sheCooks</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group5')">Artificial Intelligence</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group6')">Cinema</button></li>
+				</div>
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group7')">DevOps</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group8')">Intro to Machine Learning</button></li>
+				</div>
+		</ul>
+</nav>
+</div>
+
+<!--------CONTENT--------->
+<div class="d-none d-sm-block d-md-none d-lg-none d-xl-none" style="width: 100%; height: 75px;"></div> <!--adds space-->
+<div class="d-block d-sm-none" style="width: 100%; height: 75px;"></div> <!--adds space-->
+
+<div id="container" class="offset-md-3 col-md-8">
+
+<div id="all" class="tabcontent active">
+	<div class="row gy-5">
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/todo.png') center; background-size: 200%;" class="cell tablinks" onclick="openPage(event, 'group1')">
+				<div class="projectName">To-Do List<br /><span>Intro to Coding Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/WebDev.png') center; background-size: 100%;" class="cell tablinks" onclick="openPage(event, 'group2')">
+				<div class="projectName">Change of Scenery<br /><span>Web Development Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/StudioNotes.png') center; background-size: 150%;" class="cell tablinks" onclick="openPage(event, 'group3')">
+				<div class="projectName">Studio Notes<br /><span>Android Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/sheCooks.jpg') center; background-size: 100%;" class="cell tablinks" onclick="openPage(event, 'group4')">
+				<div class="projectName">sheCooks<br /><span>iOS Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/AI.jpg') center; background-size: 150%" class="cell tablinks" onclick="openPage(event, 'group5')">
+				<div class="projectName">Artificial Intelligence<br /><span>Artifical Intelligence Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/cinema.png') center; background-size: 150%" class="cell tablinks" onclick="openPage(event, 'group6')">
+				<div class="projectName">Cinema<br /><span>Data Science Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/DevOps.png') center; background-size: 150%" class="cell tablinks" onclick="openPage(event, 'group7')">
+				<div class="projectName">DevOps<br /><span>DevOps Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/MachineLearning.jpg') center; background-size: 150%" class="cell tablinks" onclick="openPage(event, 'group8')">
+				<div class="projectName">Intro to ML<br /><span>Machine Learning Team</span></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="about" class="tabcontent">
+	<div class="projectTitle"><h1>About SLP</h1></div>
+	<p> Semester-Long Projects (SLP) is a great program to enrich coding skills in a group setting. Participants
+		are formed into groups of similar interests. Each group is led by a mentor to build a unique coding project.
+		SLP includes workshops like git, inclusive design, and other topics to aid the project's completion. At the
+		end of the semester, the groups come together for sheCode's SLP Demo Day to showcase their project!
+	</p>
+	<br>
+	<h5>We congratulate every member and team lead on finishing SLP of 2022!</h5>
+	<p>
+		Thank you for your 10 weeks of teamwork and dedication! You have accomplished 
+		these past 10 weeks and should be proud of all the work you have done. We hope that SLP 
+		has encouraged you to explore more about Computer Science and inspires you to continue 
+		pursuing projects outside of class. We hope you had fun and learned a lot! 
+		sheCodes and sheBoard are so proud of you and we can’t wait to see where you will go from here.
+		<br>
+		-Laura Siu (she/her) sheCodes Internal Vice President 2022-2023
+	</p>
+	<br>
+	<h4>Judges for SLP 2022</h4>
+	<ul>
+		<li><h4>Daisy Tang</h4></li>
+		<li><h4>Markus Eger</h4></li>
+		<li><h4>Mohammad Husain</h4></li>
+		<li><h4>Lan Yang</h4></li>
+		<li><h4>Yu Sun</h4></li>
+	</ul>
+	<p> 
+		We would like to thank you judges for being a SLP Demo Day Judge! 
+		We appreciate you sharing your expertise and guidance with our members. 
+		On behalf of sheCodes, we sincerely thank you for taking the time to help 
+		create a meaningful experience for our SLP participants.
+	</p>
+
+</div>
+
+<div id="group1" class="tabcontent">
+	<div class="projectTitle"><h1>To-Do List<br /><span>Intro to Coding Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Tam Dinh</h4></li>
+		<li><h4>Allison Ly</h4></li>
+		<li>Youstina Gerges</li>
+		<li>Joanna Cornejo</li>
+		<li>Francisco Ramirez</li>
+		<li>Shavleen Singh</li>
+	</ul>
+
+	<h2>About the Project</h2>
+	<img src="images/projects/todolist.gif" alt="To-Do List Demo" width="800" height="450" style="background-size: contain;">
+	<br><br>
+	We are a team of upperclassmen that wanted to try something new and gain some more experience. Since we all have some 
+	coding experience, we split the project into two parts: Intro to Coding + Interview Preparation. For our interview prep, we
+	focused on behavioral questions and helped each other practice for technical interviews. Our project is a to-do 
+	list that allows users to assign their tak in specific categories: urgent, important, medium, and low.
+	<br>
+	<br>
+	Co-Leads
+	<br>
+	Tam: buttons to submit and remove task(s)<br>
+	Allison: facilitated coding interview prep.<br>
+	Both: organized meetings, sent announcements, assisted members<br><br>
+	Members:<br>
+	Joanna: design of the website<br>
+	Youstina: text box that takes user input<br>
+	Shavleen: displays user inputted task(s)<br>
+	Francisco: notification of upcoming task(s)<br>
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>HTML 5</li>
+		<li>CSS 3</li>
+		<li>Javascript</li>
+        <li>Git/GitHub</li>
+		<li>Visual Studio Code</li>
+		<li>CodingBat (With Java)</li>
+		<li>Discord and Zoom</li>
+		<li>Google Docs</li>
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Scheduling and time management</li>
+		<li>Trouble with tool installation</li>
+        <li>Technical issues with pushing/pulling to github</li>
+		<li>New languages to learn</li>
+		<li>Virtual meetings</li>
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Creating a more user interactive website</li>
+		<li>Add in more UI and UX details</li>
+	</ul>
+</div>
+
+<div id="group2" class="tabcontent">
+	<div class="projectTitle"><h1>Change of Scenery<br /><span>Web Development Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Allison Fung</h4></li>
+		<li>Raymar Lagos</li>
+		<li>Julia Alfaro</li>
+		<li>Evelyn Vu</li>
+	</ul>
+	<h2>About the Project</h2>
+	<a href="https://mayuaka.github.io/Change-of-Scenery/">Change of Scenery Website</a><br>
+	<a href="https://www.figma.com/file/pn1G4LlaLYSegaKwTiCgx7/Change-of-Scenery?node-id=0%3A1&t=cT2FJJXEDZFBlIdA-0">Link to Figma</a> <br><br>
+	<img src="images/projects/CoS.png" alt="Change of Scenery Image" width="700" height="500" style="background-size: contain;">
+	<br>
+	The team created a study helper website inspired by imissmycafe.com. The user can choose from a selection 
+	of scenery images includes: environment sounds, work/break timer, Spotify playlist, and “Trip Summary” 
+	that lists which scenery the user has visited. The work and break timer is an adjustable feature with two
+	choices, a pomodoro and custom timer.
+	<br>
+	<br>
+	Team Lead:<br>
+	Alison: work on Figma design, Category pages layout, Scenery audio settings
+	organized meetings, delegated parts of the project, etc.<br><br>
+	Members:<br>
+	Julia: created Figma design, Category pages layout, Scenery page background<br>
+	Raymar: worked on Welcome page, header, icon bar, Spotify API<br>
+	Evelyn: worked on Timer functionality and implementation<br>
+	<br>
+	<h2>Tools</h2>
+	<ul>
+		<li>HTML 5</li>
+		<li>CSS 3</li>
+		<li>JavaScript</li>
+		<li>Git/GitHub</li>
+		<li>Figma</li>
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Becoming team lead</li>
+		<li>Making a project timeline</li>
+        <li>Getting the hang of Figma and GitHub</li>
+		<li>New languages to learn</li>
+		<li>Working in a team enviornment</li>
+		<li>Time management</li>
+	</ul>
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Coding in a team project</li>
+		<li>HTML/CSS/JavaScript</li>
+		<li>Using Figma</li>
+		<li>Navigating through GitHub</li>
+		<li>Design vs Realistic Implications</li>
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Implement different background images onto the website</li>
+		<li>Add in a variety of music genres onto the website</li>
+	</ul>
+	
+</div>
+
+<div id="group3" class="tabcontent">
+	<div class="projectTitle"><h1>Studio Notes<br /><span>Android Mobile App Dev. Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Ceiara Madrigal</h4></li>
+		<li>Anna Hock</li>
+	</ul>
+	<h2>About the Project</h2>
+	<div class="videoWrapper" style="--aspect-ratio: 3 / 4;">
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_OXSIr-Lf64" 
+		title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+		encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</div>
+	<p>Studio Notes is a note-taking application that enables user to store their notes on their device.
+		Users can organize notes which are stored on a database for each unique user. They can also create
+		as many notes as they want. There is no specific order when notes are created. It will order out in a
+		straight layout.
+		<br><br>
+		Team Lead:<br>
+		Ceiara: set deadlines, provided resources, project management,
+		problem solving, coding back-end & fron-end<br><br>
+		Member:<br> 
+		Anna: coding back-end, working with in a team setting to come
+		up with ideas for the application<br>
+	</p>
+	<h2>Tools</h2>
+	<ul>
+		<li>Flutter IDE - Dart</li>
+		<li>Firebase - Firestore database and Authentication</li>
+		<li>GitHub</li>
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Ceiara: Group orginally had a total of 5 members</li>
+		<li>Anna: First time working on back-end and Android Studio/Flutter</li>
+	</ul>
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>How to use authentication sytem</li>
+		<li>Leadership and communication skills</li>
+		<li>Valueable knowledge about back-end</li>
+		<li>Learning a new language/environment</li>
+	</ul>
+	 
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>See how our app can expand when multiple notes are added</li>
+		<li>Create different authentication methods</li>
+	</ul>
+</div>
+
+<div id="group4" class="tabcontent">
+	<div class="projectTitle"><h1>sheCooks<br /><span>iOS Mobile App Dev. Team</span></h1></div>
+	<a href="https://www.freepik.com/free-vector/delicious-fast-food-menu_5152579.htm#query=cook&from_query=book%20cook&position=45&from_view=search&track=sph">Cover image by Studiogstock</a> on Freepik	<br><br>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Brittany Flores</h4></li>
+		<li>Julia Chaidez</li>
+		<li>Alison Ching</li>
+		<li>Aisling Gonzalez</li>
+	</ul>
+	<h2>About the Project</h2>
+	<br>
+	sheCooks is an app that helps the user return n amount of recipes when 
+	user picks n amount of ingredients. We wanted to create a flexible search function
+	and have detailed description of each recipe with main ingredients, steps, and time to cook.<br><br>
+	<a href="https://www.figma.com/file/TX9jt1gvoMQMpjXmsWfFbd/sheCooks?node-id=0%3A1">Check out our Figma Design!</a> <br>
+	<a href="https://www.figma.com/proto/TX9jt1gvoMQMpjXmsWfFbd/sheCooks?node-id=1%3A2&scaling=scale-down&page-id=0%3A1">Figma Prototype</a><br>
+	<br>
+	Team Lead:<br>
+	Brittany: splash screen and full stack<br><br>
+	Members:<br>
+	Julia: homescreen<br>
+	Alison: homescreen<br>
+	Aisling: recipe list and view screen<br>
+	All members worked on API caller and the recipe view screen<br>
+	<br>
+	<h2>Tools</h2>
+	<ul>
+		<li>Swift</li>
+		<li>Xcode</li>
+		<li>Figma</li>
+		<li>GitHub</li>
+		<li>Rapid API – Spoonacular</li>
+		<li>Google Docs</li>
+		<li>Discord</li>
+	</ul>
+	<h2>Challenges</h2>
+	<ul>
+		<li>Understanding a new language</li>
+		<li>Time management</li>
+	</ul>
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Helpful Youtube tutorials for Swift</li>
+		<li>Coding in Swift</li>
+		<li>Team collaboration</li>
+		<li>Navigating through GitHub</li>
+		<li>Design vs Realistic Implications</li>
+	</ul>
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Add other features</li>
+		<li>Allow more customization</li>
+	</ul>
+</div>
+
+<div id="group5" class="tabcontent">
+	<div class="projectTitle"><h1>Artificial Intelligence<br /><span>Artificial Intelligence Team</span></h1></div>
+	<a href="https://www.freepik.com/free-photo/ai-technology-brain-background-digital-transformation-concept_17122619.htm#query=Artificial%20Intelligence&position=0&from_view=search&track=sph">Cover image by Rawpixel.com</a> on Freepik
+	<br><br>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Sneha Vivek</h4></li>
+		<li>Vanessa Cano</li>
+		<li>Paige Moore</li>
+		<li>Canh Trinh</li>
+		<li>Mia Felipe</li>
+	</ul>
+	<h2>About the Project</h2>
+	<img src="images/projects/aiMLP.png" alt="First MLP for AI" width="700" height="400" style="background-size: contain;">
+	
+	<br>
+	Our team wanted to research and understand implementation of Artificial Intelligence via Neural Networks. Modeled loosely 
+	after the human brain in structure and algorithm, designed to recognize patterns, and comprised of node layers. Our team 
+	craeted 3 Multi Layer Perceptions (MLP) which printed the results for the training and test scores. 
+	<br><br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>Python</li>
+		<li>VS Code</li>
+	</ul>		
+	
+	<h2>Challenges</h2>
+	<ul>
+		<li>Scheduling meetings</li>
+		<li>Meeting everyone's knowledge level</li>
+		<li>Compiling our research in a succinct way</li>
+		<li>Understanding coding Artificial Intelligence in Python</li>
+		<li>The training data which was one letter by letter</li>
+	</ul>
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Intro to neural networks</li>
+		<li>Math behind neural networks</li>
+		<li>Multilayer perception</li>
+		<li>Creating MLPs</li>
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Implement a scanning tool to help upload notes or text files</li>
+	</ul>
+</div>
+
+<div id="group6" class="tabcontent">
+	<div class="projectTitle"><h1>Cinema<br /><span>Data Science Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Tiffany Truong</h4></li>
+		<li>Lindsay Kislingbury</li>
+		<li>Mohraiel Matta</li>
+		<li>Andrew Perez</li>
+		<li>Katelyn Mijares</li>
+
+	</ul>
+	<h2>About the Project</h2>
+	<div class="videoWrapper" style="--aspect-ratio: 3 / 4;">
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vVY0vekxPtU" 
+		title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+		encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</div>
+	Cinema is a website that provides the user a list of movies based on their chosen genre(s)/keyword.
+	The user will get a list of options along with the release date, original language, run time, and overview.
+	<br>
+	<br>
+	Team Lead:<br>
+	Tiffany: Assisted members with any problems that occured<br><br>
+	Members:<br>
+	Lindsey: Backend <br>
+	Mohraiel: Frontend, Assisted with Backend & logo<br>
+	Andrew: Frontend, Logo Design<br>
+	Katelyn: Frontend<br>
+	<br>
+	<h2>Tools</h2>
+	<ul>
+		<li>Server - Node.js</li>
+		<li>Framework - Express JS</li>
+		<li>CSV- Parser Multer</li>
+		<li>Search - Fuse.js</li>
+		<li>HTML/CSS</li>
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Datasets we found were too big to work with</li>
+		<li>Unfamiliar with new technologies such as EJS & Flexboxes</li>
+        <li>User Inclusiveness: Colors/Fonts</li>
+		<li>Frontend Design/Layout</li>
+		<li>Getting data into a usable Javascript format, performing the search → sending that data to the next HTTP route</li>
+		<li>New to the concept of Data Science</li>
+	</ul>
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Better understanding of data science & how it works</li>
+		<li>How to make documentation to share information with the rest of the team</li>
+		<li>Gained insight in new technologies (EJS & Flexboxes)</li>
+		<li>Collaboration & Teamwork</li>
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Advanced search for list of movies</li>
+		<li>More genres - Not limited to the ones we have</li>
+		<li>More detailed search</li>
+	</ul>
+</div>
+
+<div id="group7" class="tabcontent">
+	<div class="projectTitle"><h1>WalletBuddy<br /><span>DevOps Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Bryan Gonzalez</h4></li>
+		<li><h4>Erika Ledesma</h4></li>
+		<li>Meghan Nguyen</li>
+
+	</ul>
+	<h2>About the Project</h2>
+	<img src="images/Projects/WalletBuddy.png" alt="Wallet Buddy Site" width="700" height="400" style="background-size: contain;">
+	<br><br>
+	Conceptually, DevOps was used in project through scrum project management and task delegations. Many are unaware of
+	how much money can be saved instead of spent. WalletBuddy helps users keep tabs on their expenses, helping 
+	them stay on track with financial goals.
+	<br><br>
+	Co-Leads:<br>
+	Bryan: managing meeting objectives and being resourceful<br>
+	Erika: backend/frontend developer<br>
+	Members:<br>
+	Meghan: frontend framework, slides, and logo<br>
+	<br>
+	<h2>Tools</h2>
+	<ul>
+		<li>Node.js</li>
+		<li>Kanban Boards - GitHub</li>
+		<li>Spring Boot</li>
+		<li>Bootstrap</li>
+		<li>VSCode</li>
+		<li>IntelliJ IDEA</li>
+		<li>HTML/CSS</li>
+		<li>JavaScript</li>
+		<li>React</li>
+		<li>MongoDB</li>
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Unfamiliarity with certain tools</li>
+		<li>Unfamiliar with languages</li>
+        <li>Changes in team size</li>
+		<li>Limited knowledge of DevOps</li>
+		<li>Time management</li>
+		<li>Time-restrain</li>
+		<li>Knowledge/skills gaps</li>
+	</ul>
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Implementation through guidance from a tutorial and researching on Google</li>
+		<li>Set goals and objective since early stages and learn more about project management</li>
+		<li>Every challenge leadsto growth, so view issues as a way to learn more about DevOps</li>
+		<li>Be more aware of time-restraints and try to address knowledge/skills gaps early on.</li>
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>User authorization (log-in) feature</li>
+		<li>Customization</li>
+		<li>Payment method (for users who want to subscribe)</li>
+		<li>Using cloud-based platforms (AWS)</li>
+		<li>AWS and Docker</li>
+	</ul>
+</div>
+
+<div id="group8" class="tabcontent">
+	<div class="projectTitle"><h1>Intro to Machine Learning<br /><span>Machine Learning Team</span></h1></div>
+	<a href="https://www.freepik.com/free-vector/data-extraction-concept-illustration_12079896.htm#query=machine%20learning&position=21&from_view=search&track=sph">Cover image by storyset</a> on Freepik
+	<br><br>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Alejandro Hernandez</h4></li>
+		<li>Min Jung</li>
+		<li>Vivian Hoang</li>
+		<li>Stella Sinlao</li>
+	</ul>
+
+	<h2>About the Project</h2>
+	<div class="videoWrapper" style="--aspect-ratio: 3 / 4;">
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1bLChA6kQPk?start=1" title="YouTube video player" 
+		frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+		picture-in-picture; web-share" allowfullscreen></iframe>
+	</div>
+	Our goal was to learn about machine learning, particularly a method 
+	to solve simple regression problems. For this project, we created a 
+	linear regression model and train it with gradient descent to get the best possible prediction line.
+	<br><br>
+	We gathered a collection from 24 students of hours studied for an exam and their exam score.
+	We suspect a linear relationship between these two variables.
+	<br><br>
+	<h2>Tools</h2>
+	<ul>
+		<li>Python</li>
+		<li>Pandas</li>
+		<li>NumPy</li>			
+		<li>MatPlotLib</li>
+		<li>Discord</li>
+		<li>Zoom</li>
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Understanding concepts of the methods</li>
+		<li>Connectivity issues on Zoom</li>
+		<li>Limited meeting windows</li>
+	</ul>
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Better understanding of Machine Learning</li>
+		<li>Learned how to get gradient descent</li>
+		<li>Understanding how models are used for predictions</li>
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Explore functions that automatically implement linear regression from Python libraries like Scikit Learn</li>
+		<li>Study methods to optimize gradient descent</li>
+		<li>Study and implement multiple linear regression models</li>
+	</ul>
+</div>
+</div> <!--content-->
+
+</div> <!--bootstrap-->
+
+
+<!--CREDIT-->
+<div id="creditDesktop" class="d-none d-md-block">
+	<div id="anchor">
+		<div style="margin-top: -3px;"><i class="fas fa-anchor"></i></div>
+	</div>
+	<div id="4thMonth">
+		<div style="font-size: 10pt; padding-top: 10px;">Coded with care by Bernice</div>
+	</div>
+</div>
+
+<div id="creditMobile" class="d-none d-sm-block d-sm-none d-md-none d-lg-none d-xl-none">
+	� 2023 <a href="https://www.cpp.edu/~shecodes/">sheCodes</a>
+	<br />
+	<small>Coded with care by Bernice</small>
+</div>
+
+<div id="creditMobile" class="d-block d-sm-none">
+	� 2023 <a href="https://www.cpp.edu/~shecodes/">sheCodes</a>
+	<br />
+	<small>Coded with care by Bernice</small>
+</div>
+
+</body>
+
+<!--Javascript-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!--javascript for the separate tabs-->
+<script type="text/javascript">
+	function openPage(evt, cityName) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+</script>
+
+</body>
+</html>

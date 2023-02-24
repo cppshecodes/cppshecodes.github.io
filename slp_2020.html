@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Semester Long Project</title>
+
+<meta charset="utf-8">
+<link rel="shortcut icon" type="image/jpg" href="images/logo.png"/>
+
+<!--[if lte IE 8]>-->
+    <script src="html5.js" type="text/javascript"></script>
+<!--[endif]-->
+
+<!--Google Fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Open+Sans&display=swap" rel="stylesheet">
+
+<!--Font Awesome Extension-->
+<script src="https://kit.fontawesome.com/fb25db8e8c.js" crossorigin="anonymous"></script>
+
+<!--CSS Extensions-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="css/slp-custom.css">
+
+<!--jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+</head>
+<body>
+
+<!--------SIDEBAR--------->
+<div class="row g-0 col-md-2 d-none d-md-block"> <!--hides sidebar on mobile screen-->
+<nav id="sidebar" class="col-md-2">
+	<!-- Sidebar Header -->
+		<div id="sidebarHeader">
+			<span onclick="window.location.href='slp.html'">SLP</span></br>
+			<div id="tagline">Semester Long Project</div>
+		</div>
+		
+	<!-- Sidebar Links -->
+	<div class="links">
+		<ul class="list-unstyled components">
+			<li class="active">
+				<a href="https://www.cpp.edu/~shecodes/">
+					<div class="icon"><div style="margin-top: -2px;"><i class="fab fa-pagelines"></i></div></div>
+					<button>sheCodes</button>
+				</a>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-top: -2px;"><i class="fas fa-book"></i></div></div>
+				<button class="tablinks" onclick="openPage(event, 'about')">About SLP</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2022.html'">SLP Fall 2022</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2021.html'">SLP Fall 2021</button>
+			</li>
+			<li><!-- Link with dropdown items -->
+				<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+					<div class="icon"><div style="margin-top: -2px;"><i class="fas fa-chevron-down"></i></div></div>
+					<button class="tablinks" onclick="openPage(event, 'all')">All Projects</button>
+				</a>
+				<ul class="list-unstyled groups">
+					<li><button class="tablinks" onclick="openPage(event, 'group1')">PERSONA</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group2')">Blackjack</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group3')">sheNotes</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group4')">sheEscapes</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group5')">C-Smrt</button></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+</div><!--sidebar-->
+
+<!--------TOPBAR for mobile--------->
+<div class="d-none d-sm-block d-sm-none d-md-none d-lg-none d-xl-none">
+<nav id="mobileNav">
+	<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+		<div class="mobile-header">
+			<div class="icon m"><div style="margin-top: 4px;"><i class="fas fa-bars"></i></div></div>
+			Semester Long Project
+		</div>
+	</a>
+		<ul class="collapse list-unstyled" id="homeSubmenu">
+			<li><a href="https://www.cpp.edu/~shecodes/">
+					<div class="icon"><div style="margin-top: -6px;"><i class="fab fa-pagelines"></i></div></div>
+					<button class="removeBorder">sheCodes</button>
+				</a></li>
+			<li>
+			<li>
+				<div class="icon"><div style="margin-top: -7px;"><i class="fas fa-book"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'about')">About SLP</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2022.html'">SLP Fall 2022</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2021.html'">SLP Fall 2021</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-top: -5px;"><i class="fas fa-chevron-down"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'all')">All Projects</button>
+			</li>
+			<div class="indent row">
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group1')">PERSONA</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group2')">Blackjack</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group3')">sheNotes</button></li>
+				</div>
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group4')">sheEscapes</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group5')">C-Smrt</button></li>
+				</div>
+			</div>
+		</ul>
+</nav>
+</div>
+
+<!--really roundabout way to show on xs screen-->
+<div class="d-block d-sm-none">
+<nav id="mobileNav">
+	<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+		<div class="mobile-header">
+			<div class="icon m"><div style="margin-top: 4px;"><i class="fas fa-bars"></i></div></div>
+			Semester Long Project
+		</div>
+	</a>
+		<ul class="collapse list-unstyled" id="homeSubmenu">
+			<li><a href="https://www.cpp.edu/~shecodes/">
+					<div class="icon"><div style="margin-top: -6px;"><i class="fab fa-pagelines"></i></div></div>
+					<button class="removeBorder">sheCodes</button>
+				</a></li>
+			<li>
+			<li>
+				<div class="icon"><div style="margin-top: -7px;"><i class="fas fa-book"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'about')">About SLP</button>
+			</li>
+				<div class="icon"><div style="margin-top: -5px;"><i class="fas fa-chevron-down"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'all')">All Projects</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2022.html'">SLP Fall 2022</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2021.html'">SLP Fall 2021</button>
+			</li>
+			<div class="indent row">
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group1')">PERSONA</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group2')">Blackjack</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group3')">sheNotes</button></li>
+				</div>
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group4')">sheEscapes</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group5')">C-Smrt</button></li>
+				</div>
+			</div>
+		</ul>
+</nav>
+</div>
+
+<!--------CONTENT--------->
+<div class="d-none d-sm-block d-md-none d-lg-none d-xl-none" style="width: 100%; height: 75px;"></div> <!--adds space-->
+<div class="d-block d-sm-none" style="width: 100%; height: 75px;"></div> <!--adds space-->
+
+<div id="container" class="offset-md-3 col-md-8">
+
+<div id="all" class="tabcontent active">
+	<div class="row gy-5">
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/PERSONA.jpg') center; background-size: 200%;" class="cell tablinks" onclick="openPage(event, 'group1')">
+				<div class="projectName">PERSONA<br /><span>UI/UX Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/Blackjack.jpg') center; background-size: 100%;" class="cell tablinks" onclick="openPage(event, 'group2')">
+				<div class="projectName">Blackjack<br /><span>UI/UX & Software Development Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/sheNotes.png') center; background-size: 150%;" class="cell tablinks" onclick="openPage(event, 'group3')">
+				<div class="projectName">sheNotes<br /><span>UI/UX & Software Development Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/gamedev-library.png') center; background-size: 100%;" class="cell tablinks" onclick="openPage(event, 'group4')">
+				<div class="projectName">sheEscapes<br /><span>Game Development Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/projects/c-smrt.png') center; background-size: 150%" class="cell tablinks" onclick="openPage(event, 'group5')">
+				<div class="projectName">C-Smrt<br /><span>Cybersecurity Team</span></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="about" class="tabcontent">
+	<div class="projectTitle"><h1>About SLP</h1></div>
+	<p> Semester-Long Projects (SLP) is a great program to enrich coding skills in a group setting. Participants
+		are formed into groups of similar interests. Each group is led by a mentor to build a unique coding project.
+		SLP includes workshops like git, inclusive design, and other topics to aid the project's completion. At the
+		end of the semester, the groups come together for sheCode's SLP Demo Day to showcase their project!
+	</p>
+	<br>
+	<h5>We congratulate every member and team lead on finishing SLP of 2022!</h5>
+	<p>
+		Thank you for your 10 weeks of teamwork and dedication! You have accomplished 
+		these past 10 weeks and should be proud of all the work you have done. We hope that SLP 
+		has encouraged you to explore more about Computer Science and inspires you to continue 
+		pursuing projects outside of class. We hope you had fun and learned a lot! 
+		sheCodes and sheBoard are so proud of you and we can’t wait to see where you will go from here.
+		<br>
+		-Laura Siu (she/her) sheCodes Internal Vice President 2022-2023
+	</p>
+	<br>
+	<h4>Judges for SLP 2022</h4>
+	<ul>
+		<li><h4>Daisy Tang</h4></li>
+		<li><h4>Markus Eger</h4></li>
+		<li><h4>Mohammad Husain</h4></li>
+		<li><h4>Lan Yang</h4></li>
+		<li><h4>Yu Sun</h4></li>
+	</ul>
+	<p> 
+		We would like to thank you judges for being a SLP Demo Day Judge! 
+		We appreciate you sharing your expertise and guidance with our members. 
+		On behalf of sheCodes, we sincerely thank you for taking the time to help 
+		create a meaningful experience for our SLP participants.
+	</p>
+</div>
+
+<div id="group1" class="tabcontent">
+	<div class="projectTitle"><h1>PERSONA<br /><span>UI/UX Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Denise Tran</h4></li>
+		<li>Allison Chen</li>
+		<li>Min Jung</li>
+		<li>Guremhr Kaur</li>
+		<li>Irene Ninain</li>
+		<li>Akira Romyanond</li>
+		<li>Cosette Tabucol</li>
+	</ul>
+	<h2>About the Project</h2>
+	<div class="videoWrapper" style="--aspect-ratio: 3 / 4;">
+		<iframe src="https://www.youtube.com/embed/YBBip1HSar8"
+			frameborder="0" allow="accelerometer;
+			clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+	</div>
+	A site to aid in motivating and supporting students. This is achieved by providing resources and helpful tips, serving
+	as an organization tool, and an overall hub for productivity and creativity.
+	<a href="https://github.com/AllisonChen506/SLPWebsite"><h6>Check out the project on GitHub!</h6></a>
+	<h2>Tools</h2>
+	<ul>
+		<li>HTML 5</li>
+		<li>Bootstrap 4</li>
+		<li>CSS 3</li>
+		<li>Javascript</li>
+	</ul>
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>More user customization of letting them change the theme and background image</li>
+		<li>Having the site go live</li>
+	</ul>
+</div>
+
+<div id="group2" class="tabcontent">
+	<div class="projectTitle"><h1>Blackjack<br /><span>UI/UX & Software Development Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Jordyn Sato</h4></li>
+		<li>Karen Vuong - UX Design</li>
+		<li>Arianna Cooper - UX Design</li>
+		<li>Kimberly Kao - Back-end</li>
+		<li>Nana Mimura - UI/UX Design</li>
+		<li>Auraiporn Auksorn - Back-end</li>
+		<li>Urjaa Ghimirey - Back-end</li>
+		
+	</ul>
+	<h2>About the Project</h2>
+	<div class="videoWrapper" style="--aspect-ratio: 3 / 4;">
+		<iframe src="https://www.youtube.com/embed/lRwhLiK2qZc"
+			frameborder="0" allow="accelerometer;
+			clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+	</div>
+	<h4>Game Features</h4>
+	<ul>
+		<li>2 Player Game</li>
+		<li>Hand dealer controls</li>
+		<li>Bet/Hit Options</li>
+	</ul>
+	<a href="https://github.com/jmsato/slp-blackjack"><h6>Check out the project on GitHub!</h6></a>
+	<h2>Tools</h2>
+	<ul>
+		<li>JavaFX</li>
+		<li>CSS</li>
+		<li>Canva</li>
+		<li>GitHub</li>
+	</ul>
+	<h2>What Was Learned</h2>
+		<ul>
+			<li>Technical
+				<ul>
+					<li>JavaFX</li>
+					<li>CSS</li>
+					<li>GitHub</li>
+					<li>Debugging</li>
+				</ul>
+			</li>
+			<li>Personal
+				<ul>
+					<li>How to work on a team project virtually</li>
+					<li>Project management</li>
+					<li>Time management</li>
+				</ul>
+			</li>
+		</ul>
+	<h2>Given More Time...</h2>
+		<ul>
+			<li>Enhanced Effects</li>
+			<li>Test Runs</li>
+			<li>Debugging</li>
+		</ul>
+</div>
+
+<div id="group3" class="tabcontent">
+	<div class="projectTitle"><h1>sheNotes<br /><span>UI/UX & Software Development Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Nu Le</h4></li>
+		<li>Bryan Arciniega - Backend</li>
+		<li>Marilyn Hernandez - Backend</li>
+		<li>Rachel Goodrich - Frontend</li>
+		<li>Yennhi Dang - Frontend</li>
+	</ul>
+	<h2>About the Project</h2>
+	<p>During COVID we can&rsquo;t share class notes with our peers in person  so we created a web app where we can upload
+	and share notes. Users can upload their CS class notes to respective course </p>
+	<div style="width: 49%; float: left;"><div class="videoWrapper" style="--aspect-ratio: 3 / 4;">
+		<iframe width="1013" height="570"
+			src="https://www.youtube.com/embed/DKfR1GeG6WI"
+			frameborder="0" allow="accelerometer;
+			clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+	</div></div>
+	<div style="width: 49%; float: right;"><div class="videoWrapper" style="--aspect-ratio: 3 / 4;">
+		<iframe width="1013" height="570"
+			src="https://www.youtube.com/embed/nFVRBvZDtSw"
+			frameborder="0" allow="accelerometer;
+			clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+	</div></div>
+	<h2>Tools</h2>
+	<ul>
+		<li>Backend
+			<ul>
+				<li>Django Python Web Framework</li>
+				<li>Django-REST Framework</li>
+			</ul>
+		</li>
+		<li>Frontend
+			<ul>
+				<li>Figma</li>
+				<li>React Bootstrap/JS</li>
+			</ul>
+		</li>
+	</ul>
+	<h2>What Was Learned</h2>
+	<ul>
+		<li><strong>Marilyn H:</strong> This project introduced me to backend development. I was able to learn the basics like 
+			creating models, views and serializers using Django. Also, I learned how to test my API through clients
+			like Postman.</li>
+		<li><strong>Rachel G:</strong> While working on this project, I learned how to use figma to design and prototype a
+			website. I learned how to create and run a basic React project. I learned how to utilize the react-boostrap
+			components �Card� and �NavBar�, and how to customize them to fit a design.</li>
+		<li><strong>Bryan A:</strong> I learned a lot about web design using python and html. I worked on the backend creating
+			model, routing urls, and learned how to use API&rsquo;s first hand. I also learned about project management like
+			SCRUM and agile development.</li>
+		<li><strong>Yennhi D:</strong> Learned about html, css and a little bit of JS and JSX. now i understand the basics of
+			what goes into building a website front end.</li>
+	</ul>
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Merge the backend code and the front end code.</li>
+		<li>Add an option for user accounts.</li>
+		<li>Add more options to share notes between users</li>
+	</ul>
+</div>
+
+<div id="group4" class="tabcontent">
+	<div class="projectTitle"><h1>sheEscapes<br /><span>Game Development Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Mei-Ying Croddy</h4></li>
+		<li>Laura Siu - SFX</li>
+		<li>Jasmine Singh - Game Design</li>
+		<li>Emily Perez - Storywriting</li>
+		<li>Nhi Nguyen - Art</li>
+		<li>Tyler Stamp - Programming</li>
+	</ul>
+	<h2>About the Project</h2>
+	<div class="videoWrapper" style="--aspect-ratio: 3 / 4;">
+		<iframe src="https://www.youtube.com/embed/9ciWyPYEp5g"
+			frameborder="0" allow="accelerometer;
+			clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+	</div>
+	<h5>sheEscapes is a 2D pixel-art style game created in the Unity engine</h5>
+		<blockquote>&ldquo;Oh, such wonderful improvement, Josephine! You&rsquo;ve almost ripened into a perfect little princess�&rdquo;</blockquote>
+		<p>Improper, impatient, and unpoised, Princess Josephine, or Josie as she prefers to be called, could never live up to her parents&rsquo; standards.</p>
+		<p>They wanted the perfect little princess, but had no time to raise her. So what did they do? Why, send her to a reform school of course!</p>
+		<p>Far off in some distant land, Josie would learn how to be a proper princess.</p>
+		<p>...Or so they thought.</p>
+		<p>Instead, Josie was unknowingly sent to an enchanted tower, where a witch plots to steal her life essence.</p>
+		<p>Throughout the game, the player will unravel this truth with Josie, revealing the intentions of the witch, and help the little princess make her way to freedom.</p>
+		<p>Inspired by RPG-maker styled horror games, such as <em>Mad Father,</em> <em>Witch&rsquo;s House</em>, and <em>Misao</em></p>
+	<h4>Images from the Game</h4>
+	<center>
+		<img width="20%" src="images/projects/gamedev-character.PNG" />
+		<p>She had 3 designs before being finalized as a brown woman with ocean eyes and 2 cute buns.</p><br />
+		<img width="30%" src="images/projects/gamedev-library.PNG" />
+		<img width="30%" src="images/projects/gamedev-dining.PNG" />
+		<img width="30%" src="images/projects/gamedev-puzzle.PNG" /><br />
+		<p>Finished Library, Bedroom (first puzzle/start room), Dining Room</p>
+	</center>
+	<h2>Tools</h2>
+	<ul>
+		<li>Unity Editor</li>
+		<li>C#</li>
+		<li>Various art mediums</li>
+		<li>YouTube Sound Library, Adobe Audition, FreeSound.org</li>
+	</ul>
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Unity is not very user friendly/stable</li>
+		<li>Update documentations</li>
+	</ul>
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Sound and audio</li>
+		<li>More completed puzzles</li>
+		<li>2-3 more rooms with different sprites</li>
+		<li>Cutscenes</li>
+		<li>More story implementation</li>
+		<li>Improve lighting in art to enhance game environment</li>
+	</ul>
+</div>
+
+<div id="group5" class="tabcontent">
+	<div class="projectTitle"><h1>C-Smrt<br /><span>Cybersecurity Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Danica Caruaga</h4></li>
+		<li>Randy Salazar</li>
+		<li>Cybele Monterio</li>
+		<li>Karina Rivera</li>
+		<li>Amber Thomas</li>
+	</ul>
+	<h2>About the Project</h2>
+	<div class="videoWrapper" style="--aspect-ratio: 3 / 4;">
+		<iframe src="https://www.youtube.com/embed/Qy_7rE0JvBM"
+			frameborder="0" allow="accelerometer;
+			clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+	</div>
+	<a href="https://nationalcyberleague.org/"><h4>National Cyber League</h4></a>
+	<ul>
+		<li>Broad coverage of cybersecurity topics</li>
+		<li>Three levels of difficulties: Easy, Medium, Hard</li>
+		<li>NCL works well for all members</li>
+	</ul>
+	<h2>Tools</h2>
+		<ul>
+			<li>VMWare, VirtualBox
+				<ul>
+					<li>Learned how to set up virtual machine</li>
+					<li>Kali Linux</li>
+				</ul>
+			</li>
+			<li>Nmap, binwalk, exiftool</li>
+			<li>Digital invisible ink toolkit</li>
+			<li>Burp Suite</li>
+			<li>Wireshark</li>
+			<li>Python 3</li>
+		</ul>
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Open Source Intelligence
+			<ul>
+				<li>Coordinate Systems</li>
+			</ul>
+		</li>
+		<li>Web App Testing
+			<ul>
+				<li>Injection Attacks</li>
+				<li>Proxies</li>
+			</ul>
+		</li>
+		<li>Cryptography
+			<ul>
+				<li>Base64 Decoding</li>
+				<li>md5 Decryption</li>
+				<li>Steganography</li>
+			</ul>
+		</li>
+		<li>Scanning</li>
+			<ul>
+				<li>Finding open ports
+			</ul>
+		</li>
+	</ul>
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Playing more on the Gym</li>
+		<li>More collaboration on the Gym and Team Competition</li>
+		<li>Delegate topics for each person to focus on, cover more problems in the competition</li>
+		<li>Learn more about the topics in general</li>
+		<li>Apply skills to create a bonus project</li>
+	</ul>
+</div>
+
+</div> <!--content-->
+
+</div> <!--bootstrap-->
+
+
+<!--CREDIT-->
+<div id="creditDesktop" class="d-none d-md-block">
+	<div id="anchor">
+		<div style="margin-top: -3px;"><i class="fas fa-anchor"></i></div>
+	</div>
+	<div id="4thMonth">
+		<div style="font-size: 10pt; padding-top: 10px;">Coded with care by Bernice</div>
+	</div>
+</div>
+
+<div id="creditMobile" class="d-none d-sm-block d-sm-none d-md-none d-lg-none d-xl-none">
+	� 2023 <a href="https://www.cpp.edu/~shecodes/">sheCodes</a>
+	<br />
+	<small>Coded with care by Bernice</small>
+</div>
+
+<div id="creditMobile" class="d-block d-sm-none">
+	� 2023 <a href="https://www.cpp.edu/~shecodes/">sheCodes</a>
+	<br />
+	<small>Coded with care by Bernice</small>
+</div>
+
+</body>
+
+<!--Javascript-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!--javascript for the separate tabs-->
+<script type="text/javascript">
+	function openPage(evt, cityName) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+</script>
+
+</body>
+</html>
