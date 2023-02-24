@@ -1,0 +1,277 @@
+::selection { background: #77657d; color: #ffffff; }
+::-moz-selection { background: #77657d; color: #ffffff; }
+
+body {
+	background: rgb(226,187,240);
+	background: -moz-radial-gradient(right 25%, circle, rgba(149,163,208,1) 6%, rgba(157,134,179,1) 42%);
+	background: -webkit-radial-gradient(right 25%, circle, rgba(149,163,208,1) 6%, rgba(157,134,179,1) 42%);
+	background: radial-gradient(at right 25%, circle, rgba(149,163,208,1) 6%, rgba(157,134,179,1) 42%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#95a3d0",endColorstr="#9d86b3",GradientType=1);
+	background-attachment: fixed;
+	font-family: 'Nanum Gothic', sans-serif;
+	color: #323236;
+	overflow-x: hidden;
+}
+
+p {
+	font-size: 1.25em;
+}
+
+a {
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+}
+
+button {
+	background: #ffffff;
+	border: none;
+	border-bottom: 3px solid #77657d;
+	color: #8c76a3;
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+}
+	
+	button:hover {
+		background: #77657d;
+		border-bottom: 3px solid #ffffff;
+		color: #ffffff;
+	}
+
+h1, h2, h3 {
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+}
+
+#fontPage {
+	width: 100%;
+	height: 100vh;
+}
+
+#titleCard {
+	text-align: center;
+	font: 5em 'Oswald', sans-serif;
+	color: #ffffff;
+	line-height: 1em;
+}
+
+#titleCard button {
+	font: 0.4em 'Nanum Gothic', sans-serif;
+	text-transform: uppercase;
+	padding: 0px 50px;
+	letter-spacing: 5px;
+}
+	#titleCard button:hover {
+		background: #77657d;
+		border-bottom: 3px solid #ffffff;
+		color: #ffffff;
+	}
+
+#sheCodes {
+	background: #ffffff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 30px;
+	padding: 0px 20px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	border-bottom: 3px solid #77657d;
+	font-weight: 600;
+	word-spacing: 1em;
+	color: #8c76a3;
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+}
+
+	#sheCodes:hover {
+		background: #77657d;
+		border-bottom: 3px solid #ffffff;
+		color: #ffffff;
+	}
+	
+.dots {
+	background: url('../images/fwd-graphics/dots.png');
+	background-size: 200px;
+	position: absolute;
+	z-index: -1;
+	opacity: 0.25;
+}
+
+.decoCorner {
+	width: 200px;
+	height: 50px;
+	margin-top: -100px;
+	margin-left: 60%;
+	position: absolute;
+	z-index: -1;
+	border-right: 3px solid #42295a;
+	border-bottom: 3px solid #42295a;
+	opacity: 0.25;
+	float: right;
+
+}
+
+.horizontalLine {
+	background: #ffffff;
+	width: 90%;
+	height: 1px;
+	position: relative;
+	top: 0; left: 0;
+	margin: 40px 5% 0px 30px;
+}
+
+.whiteContainer {
+	background: #ffffff;
+	width: 100%;
+	min-height: 100vh;
+	padding: 75px 75px 50px 75px;
+	box-shadow: -5px 0px 50px #77657d, 5px 0px 50px #77657d;
+}
+
+.transContainer {
+	width: 100%;
+	min-height: 100vh;
+	padding: 75px;
+	color: #ffffff;
+}
+
+#learnMore {
+	width: 100%;
+	margin-bottom: 50px;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	font-size: 1.5em;
+	color: #ffffff;
+}
+
+.whiteContainer h1, .whiteContainer .sectionTitle, .whiteContainer .icon {
+	/* Fallback: Set a background color. */
+	background-color: #95a3d0;
+
+	/* Create the gradient. */
+	background-image: linear-gradient(45deg, #9d86b3, #95a3d0);
+	
+	/* Set the background size and repeat properties. */
+	background-size: 100%;
+	background-repeat: repeat;
+
+	/* Use the text as a mask for the background. */
+	/* This will show the gradient as a text color rather than element bg. */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
+}
+
+.sectionTitle {
+	width: 100%;
+	text-transform: uppercase;
+	font: 4.75em 'Oswald', sans-serif;
+	text-align: center;
+	overflow-wrap: break-word;
+}
+
+.days {
+	width: 100%;
+	text-transform: uppercase;
+	color: #8c76a3;
+	font: 1.5em 'Oswald', sans-serif;
+	text-align: center;
+	overflow-wrap: break-word;
+}
+
+a {
+	color: #8c76a3;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #ab96bf;
+}
+
+.bigIcon {
+	font-size: 3em;
+	margin-bottom: 15px;
+}
+
+#schedule {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+	#schedule tr {
+		border-bottom: 1px solid #ffffff;
+	}
+	
+	#schedule tr:last-child {
+		border-bottom: none;
+	}
+	
+	#schedule td {
+		padding: 10px 15px;
+	}
+	
+		td span {
+			background: #ffffff;
+			color: #8c76a3;
+			padding: 3px 6px;
+			font-weight: 600;
+		}
+	
+	#schedule td:nth-child(odd) {
+		border-right: 1px solid #ffffff;
+		text-align: right;
+	}
+	
+.sponsor {
+	background: #9d86b3;
+	background-image: linear-gradient(45deg, #9d86b3, #95a3d0);
+	margin-bottom: 30px;
+	border-radius: 100%;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+	.sponsor img {
+		width: 100%;
+		border-radius: 100%;
+	}
+	
+footer {
+	padding: 50px;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	color: #ffffff;
+}
+
+	footer a {
+		color: #ffffff;
+		text-decoration: underline;
+	}
+	
+	footer a:hover {
+		color: #77657d;
+	}
+
+#contact {
+	display: flex;
+	justify-content: center;
+}
+
+.icon {
+	width: 50px;
+	height: 50px;
+	margin: 0px 10px;
+	float: left;
+	border-radius: 100%;
+	font-size: 20pt;
+	padding: 5px;
+}
