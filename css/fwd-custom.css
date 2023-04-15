@@ -229,21 +229,24 @@ a:hover {
 		border-right: 1px solid #ffffff;
 		text-align: right;
 	}
-	
 .sponsor {
 	background: #9d86b3;
 	background-image: linear-gradient(45deg, #9d86b3, #95a3d0);
-	margin-bottom: 30px;
-	border-radius: 100%;
-	padding: 15px;
+	/* margin-bottom: 30px; */
+	/* border-radius: 100%; */
+	float: left;
+    width:  100%;
+    height: 100%;
+    object-fit: cover;
+	padding: 10px;
 	box-sizing: border-box;
 }
 
 	.sponsor img {
 		width: 100%;
-		border-radius: 100%;
-	}
-	
+		/* border-radius: 10%; */
+	}	
+
 footer {
 	padding: 50px;
 	left: 0;
