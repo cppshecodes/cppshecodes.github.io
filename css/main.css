@@ -10,6 +10,8 @@
 	  font: 1.1rem 'Source Sans Pro', sans-serif;
 	  color: #070707;
 	  overflow-x: hidden;
+	  cursor: url(cat_cursor.png), auto;
+	  )
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -85,6 +87,7 @@
 	  width: 100%;
 	  min-height: 100vh;
 	  position: relative;
+
   }
   
   .page {
