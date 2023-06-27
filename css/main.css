@@ -295,3 +295,15 @@
 	  margin-right: auto;
 	  width: 50%;
   }
+  @keyframes rotate {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  .rotate-animation {
+	animation: rotate 6s infinite linear; /* time interval, the longer you make it the slower it rotates!*/
+  }
