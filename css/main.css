@@ -39,15 +39,15 @@
   }
   
   .navbar {
-	  background: #ffffff;
-	  width: 100%;
-	  padding: 20px;
-	  position: fixed;
-	  z-index: 99999999;
-	  border-bottom: 2px solid #df0f7a;
-	  font: 1.05rem 'PT Mono', monospace;
+	background: #ffffff;
+	width: 100%;
+	margin-top: -10px; /* Added margin at the top */
+	padding: 20px 20px;
+	position: fixed;
+	z-index: 99999999;
+	border-bottom: 2px solid #df0f7a;
+	font: 1.05rem 'PT Mono', monospace;
   }
-  
 	  .navbar ul {
 		  text-transform: uppercase;
 	  }
