@@ -307,3 +307,12 @@
   .rotate-animation {
 	animation: rotate 6s infinite linear; /* time interval, the longer you make it the slower it rotates!*/
   }
+  
+  .question {
+	cursor: pointer;
+	margin-top: 30px;
+  }
+  
+  .answer {
+	margin-top: 10px;
+  }
