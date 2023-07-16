@@ -318,15 +318,13 @@
 	margin-top: 10px;
   }
 
-  /* Add a common class to all question containers for easy styling */
   .faq-container {
 	display: grid;
 	grid-template-columns: 1fr;
-	width: 100%; /* Adjust this value as needed */
-	margin-bottom: 10px; /* Add spacing between question and answer sections */
+	width: 100%; 
+	margin-bottom: 10px; 
   }
   
-  /* Style the answer section */
   .answer {
 	padding: 10px;
 	display: none;
