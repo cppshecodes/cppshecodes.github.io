@@ -6,7 +6,7 @@
   ::-moz-selection { background: #df0f7a; color: #ffffff; }
   
   body {
-	  background: #edd6e2;
+	  background: #fcf1f6;
 	  font: 1.1rem 'Source Sans Pro', sans-serif;
 	  color: #070707;
 	  overflow-x: hidden;
@@ -311,8 +311,23 @@
   .question {
 	cursor: pointer;
 	margin-top: 30px;
+	padding: 10px;
   }
   
   .answer {
 	margin-top: 10px;
+  }
+
+  /* Add a common class to all question containers for easy styling */
+  .faq-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	width: 100%; /* Adjust this value as needed */
+	margin-bottom: 10px; /* Add spacing between question and answer sections */
+  }
+  
+  /* Style the answer section */
+  .answer {
+	padding: 10px;
+	display: none;
   }

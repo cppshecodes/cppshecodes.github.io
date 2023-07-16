@@ -107,6 +107,16 @@
 		</div>
 	</div>
 </div>
+<style>
+	/* Add these CSS rules to move the elements more to the right */
+	.socials {
+	  margin-right: auto;
+	}
+	
+	.schedule {
+	  margin-right: auto;
+	}
+  </style>
 
 <!--ABOUT US-->
 <a name="about"><div class="page"></a>
@@ -195,8 +205,8 @@
 			</div> -->
 			<div class="col-md-6 col-sm-12">
 			  <h2>Fall 2023 Meeting Times</h2>
-			  <p>Meetings are every Thursday from 12pm to 1pm (U-hour), location TBA</p>
-			  <p>First Fall meeeting is on 8/24 @ U-hour(12-1PM)</p>
+			  <p>Meetings are every Thursday from 12pm to 1pm (U-hour), location TBA.</p>
+			  <p>First Fall meeeting is on <b>8/24</b> @ U-hour(12-1PM).</p>
 			  <br>
 			  <p>sheCode's schedule will be updated monthly here!</p>
 				<!-- <div class="schedule">
@@ -212,7 +222,7 @@
 					We will be hosting biweekly coding sessions on Fridays, dedicated to reviewing and discussing LeetCode questions. 
 					These sessions will provide an opportunity for participants to engage with the coding challenges featured in our newsletter. </p>
 					<p>
-						First session is on <b>9/1</b> and the time is U-hour (12-1PM) 
+						First session is on <b>9/1</b> and the time is U-hour (12-1PM).
 					</p>
 				<br>
 				<p>Join us as we explore and analyze the LeetCode problems, share insights, and foster a collaborative learning environment.</p>
@@ -308,8 +318,8 @@
 				<h2 style="margin-top: 30px;">Can I join the club if I am a guy?</h2>
 				As this club is created to create a community for girls who code, Males are allowed to join as long as they support the purpose of the club!
 			</div> -->
-			<div class="container">
-			<div class="question" onclick="toggleAnswer('answer1')">
+			<div class="faq-container">
+				<div class="question" onclick="toggleAnswer('answer1')">
 				<h2> What is the difference between General Members and Paid Members?</h2>
 
 			  </div>
@@ -347,7 +357,7 @@
 				</ul>
 			  </div>
 
-			  <div class="container">
+			  <div class="faq-container">
 				<div class="question" onclick="toggleAnswer('answer2')">
 				  <h2>Who can join sheCodes?</h2>
 				</div>
@@ -358,7 +368,7 @@
 				</ul>
 			  </div>
 
-			  <div class="container">
+			  <div class="faq-container">
 				<div class="question" onclick="toggleAnswer('answer3')">
 				  <h2>How is sheCodes styled?</h2>
 				</div>
@@ -369,11 +379,47 @@
 				  <li>Always with a lowercase ‘s’ and an uppercase ‘C’ even at the beginning of sentences!</li>
 				</ul>
 			  </div>
-			  <style>
-				.container {
-				  margin-bottom: 20px;
-				}
-			  </style>
+
+			  <div class="faq-container">
+				<div class="question" onclick="toggleAnswer('answer4')">
+				  <h2>Don’t have a project/experience to put on your resume?</h2>
+				</div>
+			  
+			  
+			  <div id="answer4" class="answer" style="display: none;">
+				<ul>
+				  <li>You can start off by joining our Semester Long Project(SLP). Here you can create a project w/ a team throughout the fall semester and present to our professors and gain insightful feedback. Or you can start your own personal project or join hackathons.</li>
+				</ul>
+			  </div>
+
+			  <div class="faq-container">
+				<div class="question" onclick="toggleAnswer('answer5')">
+				  <h2>Missed the internship applications deadlines?</h2>
+				</div>
+			  
+			  
+			  <div id="answer5" class="answer" style="display: none;">
+				<ul>
+					<body>
+						<li>Things you can do instead are:</li>
+						<ol>
+							<li>Join a research project (e.g. CPP STARs program, REU, etc.)</li>
+							<ul>
+								<li><a href="https://www.cpp.edu/our-cpp/students/stars/index.shtml">STARS Program</a></li>
+								<li><a href="https://www.nsf.gov/crssprgm/reu/list_result.jsp?unitid=5049">REU</a></li>
+								<li>Ask your professors if they are working on a project, and join them.</li>
+								<li>CS Faculty Research Interests: <a href="https://www.cpp.edu/sci/computer-science/faculty-and-staff/faculty-research-int.shtml">Faculty Research Interests</a></li>
+							</ul>
+							<li>Begin your own personal project!</li>
+							<li>Participate in hackathons!</li>
+						</ol>
+						<p>For summer internships, the deadlines are usually October to November.</p>
+						<p>SheCodes will try to post as many opportunities in our discord chat. Also, regularly check your Handshake or/and CPP emails for possible internship/opportunities openings.</p>
+						<p>If you have any other questions, please send them to our gmail or DM us on discord, and we will try to answer them as soon as possible!</p>
+					</body>
+				</ul>
+			  </div>
+
 			  <script>
 				function toggleAnswer(answerId) {
 				  var answer = document.getElementById(answerId);
@@ -387,6 +433,12 @@
 </div>
 
 
+<style>
+  .board img.img-responsive {
+    width: 200px;
+    height: 200px;
+  }
+</style>
 <!--board-->
 <a name="team"><div class="page"></a>
 	<div class="title"><span>public static void</span> executiveBoard &#123;</div>
@@ -423,12 +475,12 @@
 				<div class="position text-center">Treasurer</div>
 			</div>
 			<div class="col-md-4 col-sm-6">
-				<img class="board img-responsive" src="images\23-24\temporary_pfp.webp"/>
+				<img class="board img-responsive" src="images\23-24\Lesly.png"/>
 				<div class="name text-center">Lesly Ibarra</div>
 				<div class="position text-center">Mentorship Chair</div>
 			</div>
 			<div class="col-md-4 col-sm-6">
-				<img class="board img-responsive" src="images\23-24\temporary_pfp.webp"/>
+				<img class="board img-responsive" src="images\23-24\katie.png"/>
 				<div class="name text-center">Katie Pham</div>
 				<div class="position text-center">Public Relation Chair</div>
 			</div>
@@ -438,7 +490,7 @@
 				<div class="position text-center">Social Chair</div>
 			</div>
 			<div class="col-md-4 col-sm-6">
-				<img class="board img-responsive" src="images\23-24\temporary_pfp.webp"/>
+				<img class="board img-responsive" src="images\23-24\mo.png"/>
 				<div class="name text-center">Mohraiel Matta</div>
 				<div class="position text-center">Webmaster</div>
 			</div>
