@@ -410,7 +410,7 @@
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 10s;
+  animation-duration: 20s;
 }
 
 @keyframes fade {
