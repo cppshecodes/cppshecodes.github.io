@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Semester Long Project</title>
+
+<meta charset="utf-8">
+<link rel="shortcut icon" type="image/jpg" href="images/logo.png"/>
+
+<!--[if lte IE 8]>-->
+    <script src="html5.js" type="text/javascript"></script>
+<!--[endif]-->
+
+<!--Google Fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Open+Sans&display=swap" rel="stylesheet">
+
+<!--Font Awesome Extension-->
+<script src="https://kit.fontawesome.com/fb25db8e8c.js" crossorigin="anonymous"></script>
+
+<!--CSS Extensions-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="css/slp-custom.css">
+
+<!--jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+</head>
+<body>
+
+<!--------SIDEBAR--------->
+<div class="row g-0 col-md-2 d-none d-md-block"> <!--hides sidebar on mobile screen-->
+<nav id="sidebar" class="col-md-2">
+	<!-- Sidebar Header -->
+		<div id="sidebarHeader">
+			<span onclick="window.location.href='slp.html'">SLP</span></br>
+			<div id="tagline">Semester Long Project</div>
+		</div>
+		
+	<!-- Sidebar Links -->
+	<div class="links">
+		<ul class="list-unstyled components">
+			<li class="active">
+				<a href="index.html">
+					<div class="icon"><div style="margin-top: -2px;"><i class="fab fa-pagelines"></i></div></div>
+					<button>sheCodes</button>
+				</a>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-top: -2px;"><i class="fas fa-book"></i></div></div>
+				<button class="tablinks" onclick="openPage(event, 'about')">About SLP</button>
+			</li>    
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+			   <button class="tablinks" onclick="window.location.href='slp_2022.html'">SLP Fall 2022</button>
+		   </li>  
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2021.html'">SLP Fall 2021</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2020.html'">SLP Fall 2020</button>
+			</li>
+			<li><!-- Link with dropdown items -->
+				<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+					<div class="icon"><div style="margin-top: -2px;"><i class="fas fa-chevron-down"></i></div></div>
+					<button class="tablinks" onclick="openPage(event, 'all')">All Projects</button>
+				</a>
+				<ul class="list-unstyled groups">
+					<li><button class="tablinks" onclick="openPage(event, 'group1')">sheLearns</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group2')">Hackstreet Girls</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group3')">Mixtify</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group4')">CPP Planner</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group5')">Artifical Intelligence</button></li>
+                    <li><button class="tablinks" onclick="openPage(event, 'group6')">skinScare dermaCheck</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group7')">Web Portfolio</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group8')">Intro to Python</button></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+</div><!--sidebar-->
+
+<!--------TOPBAR for mobile--------->
+<div class="d-none d-sm-block d-sm-none d-md-none d-lg-none d-xl-none">
+<nav id="mobileNav">
+	<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+		<div class="mobile-header">
+			<div class="icon m"><div style="margin-top: 4px;"><i class="fas fa-bars"></i></div></div>
+			Semester Long Project
+		</div>
+	</a>
+		<ul class="collapse list-unstyled" id="homeSubmenu">
+			<li><a href="https://www.cpp.edu/~shecodes/">
+					<div class="icon"><div style="margin-top: -6px;"><i class="fab fa-pagelines"></i></div></div>
+					<button class="removeBorder">sheCodes</button>
+				</a></li>
+			<li>
+			<li>
+				<div class="icon"><div style="margin-top: -7px;"><i class="fas fa-book"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'about')">About SLP</button>
+			</li>
+				<div class="icon"><div style="margin-top: -5px;"><i class="fas fa-chevron-down"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'all')">All Projects</button>
+			</li>  
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+			   <button class="tablinks" onclick="window.location.href='slp_2022.html'">SLP Fall 2022</button>
+		   </li>  
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2021.html'">SLP Fall 2021</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2020.html'">SLP Fall 2020</button>
+			</li>
+			<div class="indent row">
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group1')">sheLearns</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group2')">Hackstreet Girls</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group3')">Mixtify</button></li>
+				</div>
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group4')">CPP Planner</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group5')">Jukeboxd</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group6')">skinScare dermaCheck</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group7')">Web Portfolio</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group8')">Intro to Python</button></li>				</div>
+				</div>
+		</ul>
+</nav>
+</div>
+
+<!--really roundabout way to show on xs screen-->
+<div class="d-block d-sm-none">
+<nav id="mobileNav">
+	<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+		<div class="mobile-header">
+			<div class="icon m"><div style="margin-top: 4px;"><i class="fas fa-bars"></i></div></div>
+			Semester Long Project
+		</div>
+	</a>
+		<ul class="collapse list-unstyled" id="homeSubmenu">
+			<li><a href="https://www.cpp.edu/~shecodes/">
+					<div class="icon"><div style="margin-top: -6px;"><i class="fab fa-pagelines"></i></div></div>
+					<button class="removeBorder">sheCodes</button>
+				</a></li>
+			<li>
+			<li>
+				<div class="icon"><div style="margin-top: -7px;"><i class="fas fa-book"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'about')">About SLP</button>
+			</li>
+				<div class="icon"><div style="margin-top: -5px;"><i class="fas fa-chevron-down"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'all')">All Projects</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+			   <button class="tablinks" onclick="window.location.href='slp_2023.html'">SLP Fall 2023</button>
+		   </li>     
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+			   <button class="tablinks" onclick="window.location.href='slp_2022.html'">SLP Fall 2022</button>
+		   </li>     
+			<li>
+ 				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2021.html'">SLP Fall 2021</button>
+			</li>          
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2020.html'">SLP Fall 2020</button>
+			</li>
+			<div class="indent row">
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group1')">sheLearns</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group2')">Hackstreet Girls</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group3')">Mixtify</button></li>
+				</div>
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group4')">CPP Planner</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group5')">Jukeboxd</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group6')">skinScare dermaCheck</button></li>
+				</div>
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group7')">Web Portfolio</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group8')">Intro to Python</button></li>
+				</div>
+		</ul>
+</nav>
+</div>
+
+<!--------CONTENT--------->
+<div class="d-none d-sm-block d-md-none d-lg-none d-xl-none" style="width: 100%; height: 75px;"></div> <!--adds space-->
+<div class="d-block d-sm-none" style="width: 100%; height: 75px;"></div> <!--adds space-->
+
+<div id="container" class="offset-md-3 col-md-8">
+
+<div id="all" class="tabcontent active">
+	<div class="row gy-5">
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url(https://i.pinimg.com/originals/5e/81/ab/5e81ab3aeb21b9639014300f326ae1a2.gif) center; background-size: 200%;" class="cell tablinks" onclick="openPage(event, 'group1')">
+				<div class="projectName">sheLearns<br /><span>Full Stack Development Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url(https://static.fandomspot.com/images/05/6906/04-sakura-futaba-persona-5-anime.jpg) center; background-size: 100%;" class="cell tablinks" onclick="openPage(event, 'group2')">
+				<div class="projectName">Hackstreet Girls<br /><span>Cybersecurity Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url(https://i.ytimg.com/vi/QUMrFv9zR1s/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgYihPMA8=&rs=AOn4CLDnMnhjOmVA6aFxJ1dQ2jayU__Fsw) center; background-size: 150%;" class="cell tablinks" onclick="openPage(event, 'group3')">
+				<div class="projectName">Mixtify<br /><span>iOS Mobile App Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/slp/2023/CPP_Planner.png') center; background-size: 100%;" class="cell tablinks" onclick="openPage(event, 'group4')">
+				<div class="projectName">CPP Planner<br /><span>UI/UX Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url(https://static.vecteezy.com/system/resources/previews/005/456/617/non_2x/illustration-of-an-african-american-girl-listening-to-music-on-the-phone-cute-girl-listens-to-music-with-headphones-vector.jpg) center; background-size: 150%" class="cell tablinks" onclick="openPage(event, 'group5')">
+				<div class="projectName">Jukeboxd<br /><span>Android Mobile App Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url(https://img.freepik.com/premium-vector/beauty-skincare-treatment-concept_160308-4037.jpg) center; background-size: 150%" class="cell tablinks" onclick="openPage(event, 'group6')">
+				<div class="projectName">skinScare dermaCheck<br /><span>Artificial Intelligence Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/slp/2023/webport.png') center; background-size: 150%" class="cell tablinks" onclick="openPage(event, 'group7')">
+				<div class="projectName">Web Portfolio<br /><span>Web Development Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url(https://i.pinimg.com/originals/e1/85/18/e18518c6d24257c6fb02e3c95a862d85.gif) center; background-size: 150%" class="cell tablinks" onclick="openPage(event, 'group8')">
+				<div class="projectName">Intro to Python<br /><span>Intro To Coding Team</span></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="about" class="tabcontent">
+	<div class="projectTitle"><h1>About SLP</h1></div>
+	<p> Semester-Long Projects (SLP) is a great program to enrich coding skills in a group setting. Participants
+		are formed into groups of similar interests. Each group is led by a mentor to build a unique coding project.
+		SLP includes workshops like git, inclusive design, and other topics to aid the project's completion. At the
+		end of the semester, the groups come together for sheCode's SLP Demo Day to showcase their project!
+	</p>
+	<br>
+	<h5>We congratulate every member and team lead on finishing SLP of 2022!</h5>
+	<p>
+		Thank you for your 10 weeks of teamwork and dedication! You have accomplished 
+		these past 10 weeks and should be proud of all the work you have done. We hope that SLP 
+		has encouraged you to explore more about Computer Science and inspires you to continue 
+		pursuing projects outside of class. We hope you had fun and learned a lot! 
+		sheCodes and sheBoard are so proud of you and we can’t wait to see where you will go from here.
+		<br>
+		-Laura Siu (she/her) sheCodes Internal Vice President 2022-2023
+	</p>
+	<br>
+	<h4>Judges for SLP 2022</h4>
+	<ul>
+		<li><h4>Daisy Tang</h4></li>
+		<li><h4>Markus Eger</h4></li>
+		<li><h4>Mohammad Husain</h4></li>
+		<li><h4>Lan Yang</h4></li>
+		<li><h4>Yu Sun</h4></li>
+	</ul>
+	<p> 
+		We would like to thank you judges for being a SLP Demo Day Judge! 
+		We appreciate you sharing your expertise and guidance with our members. 
+		On behalf of sheCodes, we sincerely thank you for taking the time to help 
+		create a meaningful experience for our SLP participants.
+	</p>
+
+</div>
+
+<div id="group1" class="tabcontent">
+	<div class="projectTitle"><h1>sheLearns<br /><span>Full Stack Development Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Min Jung</h4></li>
+		<li>Christy Xiong</li>
+		<li>Chia Yuan Wu</li>
+		<li>Tam Dinh</li>
+	</ul>
+
+	<h2>About the Project</h2>
+	<img src="images\slp\2023\sheLearnsss.png" alt="shelearns pic" width="800" height="450" style="background-size: contain;">
+	<br><br>
+	<p><a href="https://www.youtube.com/watch?v=mmEV291iwyE" target="_blank">Video Demo</a> </p>
+		<p><a href="https://github.com/SLP-Full-Stack-Team/Full_Stack_Web" target="_blank">Github</a></p>
+
+	sheCodes has Friday Coding Sessions and wants to share the problem solving videos in one place where 
+	other people can also share their solutions. Also, because sheCodes co-president, Min, doesn’t like 
+	sharing Google Drive Folders. Thus, sheLearns is a web application that allows sheCodes members to view 
+	and upload their own coding practice videos.
+
+	<br>
+	<br>
+	Roles/Responsibilities:<br>
+	Lead and Members all got a chance to work on the front-end, back-end, and database.<br>
+
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>Database Management System - PostgreSQL</li>
+		<li>SQL Client Software Application - DBeaver</li>
+		<li>Framework - Express</li>
+        <li>JavaScript Library - ReactJS</li>
+		<li>Server - Node.js</li>
+		<li>API Platform - Postman</li>
+
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Difficulty with creating PostgreSQL tables and didn’t know some psql keywords.</li>
+			<li>Difficulty with flex grids on the front-end; sometimes, the content inside a box would spill out and had to figure out how to properly use flexbox</li>
+        <li>Figuring out why the one post works and the other post returns not found.</li>
+			<li>Didn’t fully understand Express so didn’t pass different parameters.</li>
+		<li>Debugging why the postgresql couldn’t recognize the column name</li>
+			<li>Postgresql default to lower case. Uppercase parameters would be recognized as lowercase: By changing the column names to lowercase, it was solved.</li>
+		<li>Uploading videos</li>
+			<li>	Since Video unstructured data, meaning they don’t  have a fixed and organized data structure  (doesn’t use rows and columns) it can not be stored into PostgreSQL</li>
+		<li>Debugging and making sure everyone has all the applications needed installed</li>
+		<li>Working with Windows and MacOs</li>
+	</ul> 
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Learned how to create sql tables and have a better understanding of sql syntax</li>
+		<li>Takeaway: Plan to practice and study sql more for future projects that require a database</li>
+		<li>Learned how to use flexbox and improved css skills</li>
+		<li>Learned how to use REST APIs to POST, data processing and error handling</li>
+		<li>Learned the interaction between server and client</li>
+		<li>Got to practice REST APIs more</li>
+		<li>Learned to connect databases to the server-side</li>
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Create and separate between production and development code</li>
+		- Add more features:
+		<li>Allow users to upload videos from their local drive (e.g. MP3/4 files)</li>
+		<li>Allow user to upload images and word documents</li>
+		<li>Add stronger authentication when login</li>
+		<li>Add like and save button</li>
+		<li>Show user upload history</li>
+		<li>Add chat box</li>
+	</ul>
+</div>
+
+<div id="group2" class="tabcontent">
+	<div class="projectTitle"><h1>Hackstreet Girls<br /><span>Cybersecurity Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Hasti Abbasi</h4></li>
+		<li>Angie Kim</li>
+		<li>Hamin Lee</li>
+		<li>Katelyn Mijares</li>
+		<li>Armin Erika Polanco</li>
+		<li>Emily Panfilo</li>
+
+	</ul>
+	<h2>About the Project</h2>
+	<img src="images\slp\2023\hackstreet.png" width="800" height="450" style="background-size: contain;">
+	<br><br>
+	<p><a href="https://www.youtube.com/watch?v=jLyouaEFroU" target="_blank">Video Demo</a> </p>
+	<p><a href="https://replit.com/@arminerika/sheCodes-Cybersecurity-Team-Project" target="_blank">Replit Link</a></p>
+
+	Hackstreet Girls is a website that encrypts and decrypts text from user input through the implementation of a Caesar Cipher and Vigenere Cipher. 
+
+	<br>
+	<br>
+	Roles/Responsibilities:<br></p>
+	Lead:
+		<li>Hasti: assisted and managed team, worked on web development for website</li>
+</p>
+	Members: 
+		<li>Angie: Back-end (Cipher Decryption)</li>
+		<li>Hamin: Design</li>
+		<li>Katelyn: Back-end (Cipher Encryption)</li>
+		<li>Erika: Web Dev & Design</li>
+		<li>Emily: Design</li>
+
+
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>HTML/CSS</li>
+		<li>JavaScript</li>
+		<li>Figma</li>
+        <li>picsArt</li>
+		<li>Photoshop</li>
+
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Determining how to incorporate back-end/front-end </li>
+		<li>Learning how to write encryption/decryption code from scratch</li>
+		<li>Finding a meeting time where we are all available</li>
+
+	</ul> 
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Learning Javascript</li>
+		<li>Learning how to use Figma</li>
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Image Encryption and more ciphers</li>
+	</ul>
+</div>
+
+<div id="group3" class="tabcontent">
+	<div class="projectTitle"><h1>Mixtify<br /><span>iOS Mobile App Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Mia Felipe</h4></li>
+		<li>Anna Hock</li>
+		<li>Moller Myint</li>
+		<li>Hadya Rohin</li>
+		<li>Zoey Nguyen</li>
+	</ul>
+	<h2>About the Project</h2>
+	<img src="images\slp\2023\mixtify.png"  width="200" height="400" style="background-size: contain;">
+	<br><br>
+	<p><a href="https://www.youtube.com/shorts/RE2OXGUIcJI" target="_blank">Video Demo</a> </p>
+	<p><a href="https://www.youtube.com/shorts/RivtmlSJ4Gc" target="_blank">Wireframe video Demo</a> </p>
+	<p><a href="https://github.com/mialmf/iosdev/tree/main" target="_blank">GitHub Link</a></p>
+
+	Mixtify is a playlist generator application that utilizes the Spotify API.
+	<br>
+	<br>
+	Roles/Responsibilities:<br></p>
+	Lead:
+		<li>Mia: heald meetings, designated tasks, assigned pages, found tutorial videos and helped with debugging, Welcome page, Grid Genre page</li>
+</p>
+	Members: 
+		<li>Anna: Spotify API integration, connected all pages, debugging</li>
+		<li>Moller: Loading page and created assets</li>
+		<li>Hadya: drea assets and assisted with Spotify API integration</li>
+		<li>Zoey: Generate Playlist page, debugging, Grid Page assistance</li>
+
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>Figma</li>
+		<li>Adobe Illustartor</li>
+		<li>Xcode</li>
+        <li>Swift</li>
+
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Getting and using the Spotify API</li>
+		<li>Using Xcode as an IDE</li>
+		<li>Corss platform development</li>
+		<li>Learning Swift from the beginning</li>
+
+	</ul> 
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>How to utilize XCode and Swift, as well as its general functions</li>
+		<li>How to create an actual application</li>
+		<li>GitHub/Gitbash</li>
+		<li>Read documentation before implementing</li>
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Redone in SwiftUI to integrate Spotify</li>
+		<li>Cleaned up the look and feel of the app to be more uniform</li>
+	</ul>
+</div>
+
+<div id="group4" class="tabcontent">
+	<div class="projectTitle"><h1>CPP Planner<br /><span> UI/UX Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Erika Ledesma</h4></li>
+		<li>Natasya Hadiwijaya</li>
+		<li>Cynthia Nguyen</li>
+		<li>Maddie Isaacs</li>
+		<li>Aiah Valera</li>
+		<li>Rane Dy</li>
+	</ul>
+	<h2>About the Project</h2>
+	<img src="images\slp\2023\CPP_Planner.png" width="800" height="450" style="background-size: contain;">
+	<br><br>
+	<p><a href="https://www.youtube.com/watch?v=bGbpaxIY9lE&t=1s" target="_blank">Video Demo</a> </p>
+	<p><a href="https://www.figma.com/file/8FDNg3wfgSy2EvBSyUgRir/Task-%232%2C-%235?type=design&node-id=0%3A1&mode=design&t=KbyGKYSb3jDcMhhy-1" target="_blank">Figma Link</a></p>
+
+	CARMEN redesigned BroncoDirect and CPP Planner and created a wireframe and prototype to mimic the website if they had actually implemented it into a real site. Their aim was to make it easier on the eyes by reorganizing features and redesigning the interface.
+	<br>
+	<br>
+	Roles/Responsibilities:<br></p>
+	Lead:
+		<li>Erika: desktop prototype, website layout, CPP Planner re-design, advisor meeting page</li>
+</p>
+	Members: 
+		<li>Natasya: desktop prototype, mobile layout, navigation bar, progress wheel, Billy chat, accessibility</li>
+		<li>Cynthia: desktop prototype, pagination, CPP Planner re-design</li>
+		<li>Maddie: desktop prototype, fonts, CPP Planner re-design, class search</li>
+		<li>Aiah: mobile, icons prototype, mobile layout, profile and appointment pages</li>
+		<li>Rane: mobile layout, color theory, class schedule/research re-design</li>
+
+
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>Figma</li>
+		<li>Zoom</li>
+		<li>Google Docs</li>
+        <li>Discord</li>
+
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Experience with Figma:</li>
+		With the team having varying experiences with Figma, it was difficult to accomplish designs exactly how we pictured it at times.
+		<li>Scheduling conflicts:</li>
+		It was difficult to find times that’d work for everyone, and when we did it was very limited.
+		<li>Virtual meetings</li>
+		With the majority of our work being done virtually/individually, sometimes there would be miscommunication on what we intend to do.
+
+	</ul> 
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Experience before vs. after:</li>
+		A lot of us had little experience with Figma before, but are now much more familiar with design features and making components interactive
+		<li>Main Accomplishments</li>
+		Different approach of utilizing the existing system to be one type of all-in-one interface, while minimizing the user’s frustration and maximize UX from using the website
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>We would love to meet up again and develop the prototypes as an actual application!</li>
+		<li>Related Topics of Interest:</li>
+		Explore backend development,  would be interested in seeing how that works with the frontend especially with Figma prototypes
+	</ul>
+</div>
+
+<div id="group5" class="tabcontent">
+	<div class="projectTitle"><h1>Jukeboxd<br /><span>Jukeboxd Team</span></h1></div>
+	<a href="https://www.freepik.com/free-photo/ai-technology-brain-background-digital-transformation-concept_17122619.htm#query=Artificial%20Intelligence&position=0&from_view=search&track=sph">Cover image by Rawpixel.com</a> on Freepik
+	<br><br>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Katie Pham</h4></li>
+		<li>Taylor Knobloch</li>
+		<li>Kenia Velasco</li>
+		<li>Ariana Villagrana</li>
+		<li>Julia Chaidez</li>
+	</ul>
+	<h2>About the Project</h2>
+	<img src="images\slp\2023\Jukeboxd.png" width="800" height="450" style="background-size: contain;">
+	<br><br>
+	<p><a href="https://www.youtube.com/watch?v=b07w6227QlQ " target="_blank">Video Demo</a> </p>
+	<p><a href="https://github.com/klpham137/AndroidApp_SLP23" target="_blank">Github Link</a></p>
+	<p><a href="https://www.figma.com/file/fmX5OemIxV47lC2GYizu7j/mock-up?type=design&node-id=0-1&mode=design" target="_blank">Figma Link</a></p>
+
+
+	Jukeboxd is an app that is designed to bring music into the world of social discovery by having a recommendation/rating system that is inspired by Letterboxd. To share music is also to share opinions and thoughts. A world with music is a world filled with happiness. 
+	<br>
+	<br>
+	Roles/Responsibilities:<br></p>
+	Lead:
+		<li>Katie: Assisted and managed team, designer and programmer</li>
+</p>
+	Members: 
+		<li>Taylor: Designer</li>
+		<li>Kenia: Designer</li>
+		<li>Ariana: Programmer</li>
+		<li>Julia: Programmer</li>
+
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>Kotlin</li>
+		<li>Dart</li>
+		<li>Spotify API</li>
+
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Could only focus the front-end of the application</li>
+		<li>Stuck to original design as much as possible</li>
+		<li>Used placeholders for spots that would require backend info (ie. account sign in page)</li>
+
+	</ul> 
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Learned how to work as a team after getting us all on the same page in terms of developing a mobile app</li>
+		<li>How to use version control as a team for future purposes</li>
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Our project is still a work in progress, and we plan to continue development through winter and next summer if necessary</li>
+	</ul>
+</div>
+
+<div id="group6" class="tabcontent">
+	<div class="projectTitle"><h1>skinScare dermaCheck<br /><span>Artificial Intelligence Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Shavleen Signh</h4></li>
+		<li><h4>Keerthi Sreeram</h4></li>
+		<li>Annika Ruggles</li>
+		<li>Aurea Jolly</li>
+		<li>Kenzie Lam</li>
+		<li>Ana Venegas</li>
+
+	</ul>
+	<h2>About the Project</h2>
+	<img src="images\slp\2023\skinScare.png"  width="800" height="450" style="background-size: contain;">
+	<br><br>
+	<p><a href="https://www.youtube.com/watch?v=WRAqyVAwSC8" target="_blank">Video Demo</a> </p>
+	<p><a href="https://github.com/keesree/try1" target="_blank">Github Link</a></p>
+
+	An image classification application that distinguishes whether the skin in the uploaded image contains melanoma or not.
+	<br>
+	<br>
+	Roles/Responsibilities:<br></p>
+	Leads:</p>
+		Shavleen:
+		<li>Sending out announcements</li>
+		<li>Reserving study rooms for meetings</li>
+		<li>Creating discord events</li>
+		<li>Keeping us on track</li>
+		<li>Finding learning activities for the team</li>
+		<li>Backend- experimenting with backend servers to connect to a web app for image classification</li>
+</p>
+		Keerthi:
+		<li>Sending out announcements, updating work tracker</li>
+		<li>Establishing connections in tools such as colab, github, figma etc.</li>
+		<li>Finding resources/tutorials to learn from.</li>
+		<li>Developed the Flask app</li>
+		<li>Deployed our classification model into the app</li>
+
+</p>
+	Members: </p>
+		<li>Annika: Data formatting & model research</li>
+		<li>Aurea: Data collecting & UI/UX design</li>
+		<li>Kenzie: experimenting with backend servers to connect to a web app for image classification and git hub maintenance </li>
+		<li>Ana: Data collecting & UI/UX design</li>
+
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>VScode</li>
+		<li>Google Co-lab: Python</li>
+		<li>React: HTML/CSS,JavaScript</li>
+        <li>Git/Github</li>
+		<li>Figma</li>
+		<li>Flask</li>
+		<li>Training data: The International Skin Imaging Collaboration</li>
+		<li>KanbanFlow</li>
+
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Learning how to connect github to work alongside each other </li>
+		<li>Trying to find the best backend for connecting the co-lab to react as an API</li>
+		<li>Reformatting data correctly</li>
+		<li>Finding the best way to deploy our AI Model as a web application</li>
+
+	</ul> 
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Effectively communicating as a team to get tasks done</li>
+		<li>Automating data downloads</li>
+		<li>Image classification by creating neural networks models using Keras of tensorflow</li>
+		<li>Learning how to use web development tools</li>
+		<li>Experimenting with different kinds of backend servers that connect to react</li>
+		<li>Utilized online platforms to access high-quality instructional content on the basics of AI</li>
+		<li>Ultimately learning that we need to use flask as a server to serve Python models</li>
+
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Include more clear images for image classification </li>
+		<li>Make a multi-classification model identifying different skin diseases</li>
+		<li>Establish a legit connection between the app and the backend and display results</li>
+		<li>Add a login page to the app</li>
+	</ul>
+</div>
+
+<div id="group7" class="tabcontent">
+	<div class="projectTitle"><h1>Web Portfolio<br /><span>Web Development Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Youstina Gerges</h4></li>
+		<li>Ngoc Chau Nguyen (Chau Nguyen)</li>
+		<li>Sarah Abdeen</li>
+		<li>Mandy Ly</li>
+		<li>Denise Thuong</li>
+		<li>Paige Moore</li>
+
+
+	</ul>
+	<h2>About the Project</h2>
+	<img src="images\slp\2023\webport.png" width="800" height="450" style="background-size: contain;">
+	<br><br>
+	<p><a href="https://www.youtube.com/watch?v=NB3hM9_DYGA" target="_blank">Video Demo</a> </p>
+	<p><a href="https://github.com/yngerges-pro/SLP-WebPortfolio" target="_blank">Github Link</a></p>
+
+	This website promotes students’ success and achievements in a web portfolio.
+	<br>
+	<br>
+	Roles/Responsibilities:<br></p>
+	Lead:</p>
+	Youstina:
+		<li>Creating/Assigning roles</li>
+		<li>Creating Timeline</li>
+		<li>Managing Meetings</li>
+		<li>Staying in touch</li>
+		<li>Giving Instructions</li>
+		<li>Giving Tutorials</li>
+		<li>Providing Resources</li>
+		<li>Managing GitHub</li>
+</p>
+	Members:</p>
+		Web Designer: Mandy & Paige:
+		<li>Structured HTML Files:</li>
+		<li>Created shapes</li>
+		<li>Font and Background color</li>
+		<li>Positioned Elements</li>
+		<li>Header and Footer</li>
+		<li>Resized Elements</li>
+		<li>Designed the Website</li></p>
+
+		UI/UX Designer: Chau & Denise:
+		<li>Image Carousel</li>
+		<li>Parallax</li>
+		<li>Sticky header/footer</li>
+		<li>Created Linkages</li>
+		<li>Linked HTML pages together</li>
+		<li>Socials,Github,Emails,Phones</li>
+		<li>Linked project examples</li></p>
+
+		Web Image Manager: Sarah
+		<li>Added Images for:</li>
+			<li>Image Carousel</li>
+			<li>Parallax</li>
+			<li>Social Icons</li>
+			<li>Profile Picture</li>
+			<li>Resume/CV</li>
+			<li>GIFs</li>
+
+
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>Figma</li>
+		<li>W3schools</li>
+		<li>GitHub/Git</li>
+        <li>VSCode</li>
+		<li>Pinterest</li>
+		<li>GIPHY</li>
+		<li>HTML/CSS</li>
+		<li>JavaScript</li>
+		<li>Discord</li>
+		<li>Zoom</li>
+
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Git commands like git clone and git push</li>
+		<li>Merging from/to Main branch</li>
+		<li>Finding a good amount of images</li>
+		<li>Resizing images, shapes, and other elements</li>
+		<li>Communication between group members</li>
+		<li>Figuring out what other group members have completed</li>
+	</ul> 
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>HTML/CSS and JavaScript</li>
+		<li>Learning how to use VSCode</li>
+		<li>How to push through Git Bash Terminal</li>
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Using it to customize it for our own benefits!</li>
+	</ul>
+</div>
+
+<div id="group8" class="tabcontent">
+	<div class="projectTitle"><h1>Intro to Python<br /><span>Intro To Coding Team</span></h1></div>
+	<a href="https://www.freepik.com/free-vector/data-extraction-concept-illustration_12079896.htm#query=machine%20learning&position=21&from_view=search&track=sph">Cover image by storyset</a> on Freepik
+	<br><br>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Alison Fung</h4></li>
+		<li><h4>Lesly Ibarra</h4></li>
+		<li>Andrea Alcaraz</li>
+		<li>Athalia Zhou</li>
+		<li>Arriana Flores</li>
+		<li>Valeria Uruza</li>
+		<li>Liessy Ramirez</li>
+	</ul>
+
+	<h2>About the Project</h2>
+	<img src="images\slp\2023\introdisc.png" width="500" height="450" style="background-size: contain;">
+	<img src="images\slp\2023\introgame.png" width="300" height="300" style="background-size: contain;">
+
+	<br><br>
+	<p><a href="https://youtu.be/KLXwJQLi7uE?si=bqxL21yguzvn9QVR" target="_blank">Discord bot video Demo</a> </p>
+	<p><a href="https://youtu.be/5zBQmikJgMc" target="_blank">Games video Demo</a> </p>
+
+	<p><a href="https://github.com/alisonfung/ReminderBot" target="_blank">Discord Bot GitHub Link</a></p>
+	<p><a href="https://github.com/leslydibarra/IntroCoding_TeamGames" target="_blank">Games GitHub Link</a></p>
+
+
+	Intro. To Coding team spent the first half of SLP learning Python basics on Codeacademy, where they learned topics such as functions, lists, loops, dictionaries, etc. The second half of SLP was spent doing small projects to put Python skills to use! 
+
+	<br>
+	<br>
+	Roles/Responsibilities:<br></p>
+	Leads:
+		<li>Alison: Discord Bot project lead</li>
+		<li>Lesly: Games project lead</li>
+</p>
+	Members: 
+		<li>Andrea: Snake game</li>
+		<li>Athalia: Connect 4 & Menu for Games</li>
+		<li>Arriana: Hangman game</li>
+		<li>Valeria: getting input from user for Discord Bot</li>
+		<li>Liessy: sending reminder DM for Discord Bot</li>
+
+
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>Python</li>
+		<li>Visual Studio Code</li>
+		<li>Git & GitHub</li>
+        <li>Discord Bot: discord.py library, Discord</li>
+		<li>Games: Pygame Library, Tkinter library (interface)</li>
+
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Leads: Solving technical problems with installing Python, setting up Git/Github etc. for team members</li></p>
+		Members:
+		<li>First time working with coding and how to work in VSCode/the terminal</li>
+		<li>First time navigating Git/Github</li>
+		<li>Limited time/time-management</li>
+	</ul> 
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Everyone learned: Python basics!</li>
+		<li>Experience level: Most team members still feel like beginners but have gotten good experience with a new language!</li>
+		<li>Valeria: How to use Python to create a Discord bot</li>
+		<li>Arriana: How to develop a game from scratch with Python</li>
+		<li>Andrea: How to push code to Github and make a game in Python</li>
+		<li>Liessy: Difference between a function and a variable, how to use datetime library</li>
+		<li>Athalia: How to use Github, VS Code, and Pygame</li>
+
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Create a custom game</li>
+		<li>Add personal features to current games, including sound and music</li>
+		<li>Add input validation to the Discord bot, to ensure the user enters a valid number</li>
+		<li>Add a command to the Discord bot to view current scheduled reminders</li>
+	</ul>
+</div>
+</div> <!--content-->
+
+</div> <!--bootstrap-->
+
+
+<!--CREDIT-->
+<div id="creditDesktop" class="d-none d-md-block">
+	<div id="anchor">
+		<div style="margin-top: -3px;"><i class="fas fa-anchor"></i></div>
+	</div>
+	<div id="4thMonth">
+		<div style="font-size: 10pt; padding-top: 10px;">Coded with care by Bernice</div>
+	</div>
+</div>
+
+<div id="creditMobile" class="d-none d-sm-block d-sm-none d-md-none d-lg-none d-xl-none">
+	� 2023 <a href="https://www.cpp.edu/~shecodes/">sheCodes</a>
+	<br />
+	<small>Coded with SLAY by Mohraiel</small>
+</div>
+
+<div id="creditMobile" class="d-block d-sm-none">
+	� 2023 <a href="https://www.cpp.edu/~shecodes/">sheCodes</a>
+	<br />
+	<small>Coded with SLAY by Mohraiel</small>
+</div>
+
+</body>
+
+<!--Javascript-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!--javascript for the separate tabs-->
+<script type="text/javascript">
+	function openPage(evt, cityName) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+</script>
+
+</body>
+</html>
