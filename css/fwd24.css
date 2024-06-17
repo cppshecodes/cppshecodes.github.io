@@ -4,16 +4,17 @@
 
 /* Body */
 body {
-	background: rgb(187,226,240);
-	background: -moz-radial-gradient(right 25%, circle, rgb(121, 193, 124) 6%, rgb(82, 138, 87) 42%);
-	background: -webkit-radial-gradient(right 25%, circle, rgb(121, 193, 124) 6%, rgb(82, 138, 87) 42%);
-	background: radial-gradient(at right 25%, circle, rgb(121, 193, 124) 6%, rgb(82, 138, 87) 42%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4fa495",endColorstr="#b39d86",GradientType=1);
+	background: rgb(187, 226, 240);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(121, 193, 124, 1) 0%, rgba(82, 138, 87, 1) 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(121, 193, 124, 1) 0%, rgba(82, 138, 87, 1) 100%);
+	background: radial-gradient(ellipse at center, rgba(121, 193, 124, 1) 0%, rgba(82, 138, 87, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#79c17c",endColorstr="#528a57",GradientType=1);
 	background-attachment: fixed;
 	font-family: 'Nanum Gothic', sans-serif;
 	color: #323236;
 	overflow-x: hidden;
 }
+
 
 /* Typography */
 p {
