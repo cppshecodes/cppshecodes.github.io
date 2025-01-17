@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Semester Long Project</title>
+
+<meta charset="utf-8">
+<link rel="shortcut icon" type="image/jpg" href="images/logo.png"/>
+
+<!--[if lte IE 8]>-->
+    <script src="html5.js" type="text/javascript"></script>
+<!--[endif]-->
+
+<!--Google Fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Open+Sans&display=swap" rel="stylesheet">
+
+<!--Font Awesome Extension-->
+<script src="https://kit.fontawesome.com/fb25db8e8c.js" crossorigin="anonymous"></script>
+
+<!--CSS Extensions-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="css/slp-custom.css">
+
+<!--jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+</head>
+<body>
+
+<!--------SIDEBAR--------->
+<div class="row g-0 col-md-2 d-none d-md-block"> <!--hides sidebar on mobile screen-->
+<nav id="sidebar" class="col-md-2">
+	<!-- Sidebar Header -->
+		<div id="sidebarHeader">
+			<span onclick="window.location.href='slp.html'">SLP</span></br>
+			<div id="tagline">Semester Long Project</div>
+		</div>
+		
+	<!-- Sidebar Links -->
+	<div class="links">
+		<ul class="list-unstyled components">
+			<li class="active">
+				<a href="index.html">
+					<div class="icon"><div style="margin-top: -2px;"><i class="fab fa-pagelines"></i></div></div>
+					<button>sheCodes</button>
+				</a>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-top: -2px;"><i class="fas fa-book"></i></div></div>
+				<button class="tablinks" onclick="openPage(event, 'about')">About SLP</button>
+			</li>    
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+			   <button class="tablinks" onclick="window.location.href='slp_2024.html'">SLP Fall 2024</button>
+		   </li> 
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+			   <button class="tablinks" onclick="window.location.href='slp_2022.html'">SLP Fall 2022</button>
+		   </li>  
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2021.html'">SLP Fall 2021</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2020.html'">SLP Fall 2020</button>
+			</li>
+			<li><!-- Link with dropdown items -->
+				<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+					<div class="icon"><div style="margin-top: -2px;"><i class="fas fa-chevron-down"></i></div></div>
+					<button class="tablinks" onclick="openPage(event, 'all')">All Projects</button>
+				</a>
+				<ul class="list-unstyled groups">
+					<li><button class="tablinks" onclick="openPage(event, 'group1')">joeBot</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group2')">Letters2U</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group3')">Moodz</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group4')">Lane Detection</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group5')">Artifical Intelligence</button></li>
+                    <li><button class="tablinks" onclick="openPage(event, 'group6')">Echoes of Art</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group7')">Memory Vault</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group8')">Cyber & UI/UX</button></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+</div><!--sidebar-->
+
+<!--------TOPBAR for mobile--------->
+<div class="d-none d-sm-block d-sm-none d-md-none d-lg-none d-xl-none">
+<nav id="mobileNav">
+	<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+		<div class="mobile-header">
+			<div class="icon m"><div style="margin-top: 4px;"><i class="fas fa-bars"></i></div></div>
+			Semester Long Project
+		</div>
+	</a>
+		<ul class="collapse list-unstyled" id="homeSubmenu">
+			<li><a href="https://www.cpp.edu/~shecodes/">
+					<div class="icon"><div style="margin-top: -6px;"><i class="fab fa-pagelines"></i></div></div>
+					<button class="removeBorder">sheCodes</button>
+				</a></li>
+			<li>
+			<li>
+				<div class="icon"><div style="margin-top: -7px;"><i class="fas fa-book"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'about')">About SLP</button>
+			</li>
+				<div class="icon"><div style="margin-top: -5px;"><i class="fas fa-chevron-down"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'all')">All Projects</button>
+			</li>  
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+			   <button class="tablinks" onclick="window.location.href='slp_2024.html'">SLP Fall 2022</button>
+		   </li> 
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+			   <button class="tablinks" onclick="window.location.href='slp_2022.html'">SLP Fall 2022</button>
+		   </li>  
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2021.html'">SLP Fall 2021</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2020.html'">SLP Fall 2020</button>
+			</li>
+			<div class="indent row">
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group1')">joeBot</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group2')">Letters2U</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group3')">Moodz</button></li>
+				</div>
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group4')">Lane Detection</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group5')">Password Analyzer</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group6')">Echoes of Art</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group7')">Web Portfolio</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group8')">Cybersecurity & UI/UX</button></li>				</div>
+				</div>
+		</ul>
+</nav>
+</div>
+
+<!--really roundabout way to show on xs screen-->
+<div class="d-block d-sm-none">
+<nav id="mobileNav">
+	<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+		<div class="mobile-header">
+			<div class="icon m"><div style="margin-top: 4px;"><i class="fas fa-bars"></i></div></div>
+			Semester Long Project
+		</div>
+	</a>
+		<ul class="collapse list-unstyled" id="homeSubmenu">
+			<li><a href="https://www.cpp.edu/~shecodes/">
+					<div class="icon"><div style="margin-top: -6px;"><i class="fab fa-pagelines"></i></div></div>
+					<button class="removeBorder">sheCodes</button>
+				</a></li>
+			<li>
+			<li>
+				<div class="icon"><div style="margin-top: -7px;"><i class="fas fa-book"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'about')">About SLP</button>
+			</li>
+				<div class="icon"><div style="margin-top: -5px;"><i class="fas fa-chevron-down"></i></div></div>
+				<button class="tablinks removeBorder" onclick="openPage(event, 'all')">All Projects</button>
+			</li>
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+			   <button class="tablinks" onclick="window.location.href='slp_2024.html'">SLP Fall 2023</button>
+		   </li> 
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+			   <button class="tablinks" onclick="window.location.href='slp_2023.html'">SLP Fall 2023</button>
+		   </li>     
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+			   <button class="tablinks" onclick="window.location.href='slp_2022.html'">SLP Fall 2022</button>
+		   </li>     
+			<li>
+ 				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2021.html'">SLP Fall 2021</button>
+			</li>          
+			<li>
+				<div class="icon"><div style="margin-left: 2px; margin-top: -2px;"><i class="fas fa-chevron-right"></i></div></div>
+				<button class="tablinks" onclick="window.location.href='slp_2020.html'">SLP Fall 2020</button>
+			</li>
+			<div class="indent row">
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group1')">joeBot</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group2')">Letters2U</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group3')">Moodz</button></li>
+				</div>
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group4')">Lane Detection</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group5')">Password Analyzer</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group6')">Echoes of Art</button></li>
+				</div>
+				<div class="column col">
+					<li><button class="tablinks" onclick="openPage(event, 'group7')">Memory Vault</button></li>
+					<li><button class="tablinks" onclick="openPage(event, 'group8')">Cybersecurity & UI/UX</button></li>
+				</div>
+		</ul>
+</nav>
+</div>
+
+<!--------CONTENT--------->
+<div class="d-none d-sm-block d-md-none d-lg-none d-xl-none" style="width: 100%; height: 75px;"></div> <!--adds space-->
+<div class="d-block d-sm-none" style="width: 100%; height: 75px;"></div> <!--adds space-->
+
+<div id="container" class="offset-md-3 col-md-8">
+
+<div id="all" class="tabcontent active">
+	<div class="row gy-5">
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url(https://i.pinimg.com/originals/5e/81/ab/5e81ab3aeb21b9639014300f326ae1a2.gif) center; background-size: 200%;" class="cell tablinks" onclick="openPage(event, 'group1')">
+				<div class="projectName">joeBot<br /><span>Intro to Automation/Scripting Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url(https://static.fandomspot.com/images/05/6906/04-sakura-futaba-persona-5-anime.jpg) center; background-size: 100%;" class="cell tablinks" onclick="openPage(event, 'group2')">
+				<div class="projectName">Letters2U<br /><span>UI/UX Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url(https://i.ytimg.com/vi/QUMrFv9zR1s/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgYihPMA8=&rs=AOn4CLDnMnhjOmVA6aFxJ1dQ2jayU__Fsw) center; background-size: 150%;" class="cell tablinks" onclick="openPage(event, 'group3')">
+				<div class="projectName">Moodz<br /><span>Full Stack Development Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/slp/2023/CPP_Planner.png') center; background-size: 100%;" class="cell tablinks" onclick="openPage(event, 'group4')">
+				<div class="projectName">Lane Detection<br /><span>Artificial Intelligence Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url(https://static.vecteezy.com/system/resources/previews/005/456/617/non_2x/illustration-of-an-african-american-girl-listening-to-music-on-the-phone-cute-girl-listens-to-music-with-headphones-vector.jpg) center; background-size: 150%" class="cell tablinks" onclick="openPage(event, 'group5')">
+				<div class="projectName">Password Analyzer<br /><span> Cybersecurity Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url(https://img.freepik.com/premium-vector/beauty-skincare-treatment-concept_160308-4037.jpg) center; background-size: 150%" class="cell tablinks" onclick="openPage(event, 'group6')">
+				<div class="projectName">Echoes of Art<br /><span>Web Development Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url('images/slp/2023/webport.png') center; background-size: 150%" class="cell tablinks" onclick="openPage(event, 'group7')">
+				<div class="projectName">Memory Vault<br /><span>iOS Mobile App Team</span></div>
+			</div>
+		</div>
+		<div class="col col-md-6 col-sm-12 col-12">
+			<div style="background: url(https://i.pinimg.com/originals/e1/85/18/e18518c6d24257c6fb02e3c95a862d85.gif) center; background-size: 150%" class="cell tablinks" onclick="openPage(event, 'group8')">
+				<div class="projectName">Cybersecurity & UI/UX<br /><span> Intro to Coding Team</span></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="about" class="tabcontent">
+	<div class="projectTitle"><h1>About SLP</h1></div>
+	<p> Semester-Long Projects (SLP) is a great program to enrich coding skills in a group setting. Participants
+		are formed into groups of similar interests. Each group is led by a mentor to build a unique coding project.
+		SLP includes workshops like git, inclusive design, and other topics to aid the project's completion. At the
+		end of the semester, the groups come together for sheCode's SLP Demo Day to showcase their project!
+	</p>
+	<br>
+	<h5>We congratulate every member and team lead on finishing SLP of 2022!</h5>
+	<p>
+		Thank you for your 10 weeks of teamwork and dedication! You have accomplished 
+		these past 10 weeks and should be proud of all the work you have done. We hope that SLP 
+		has encouraged you to explore more about Computer Science and inspires you to continue 
+		pursuing projects outside of class. We hope you had fun and learned a lot! 
+		sheCodes and sheBoard are so proud of you and we can’t wait to see where you will go from here.
+		<br>
+		-Laura Siu (she/her) sheCodes Internal Vice President 2022-2023
+	</p>
+	<br>
+	<h4>Judges for SLP 2022</h4>
+	<ul>
+		<li><h4>Daisy Tang</h4></li>
+		<li><h4>Markus Eger</h4></li>
+		<li><h4>Mohammad Husain</h4></li>
+		<li><h4>Lan Yang</h4></li>
+		<li><h4>Yu Sun</h4></li>
+	</ul>
+	<p> 
+		We would like to thank you judges for being a SLP Demo Day Judge! 
+		We appreciate you sharing your expertise and guidance with our members. 
+		On behalf of sheCodes, we sincerely thank you for taking the time to help 
+		create a meaningful experience for our SLP participants.
+	</p>
+
+</div>
+
+<div id="group1" class="tabcontent">
+	<div class="projectTitle"><h1>joeBot<br /><span>Intro to Automation/Scripting Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Athalia Zhou</h4></li>
+		<li>Damian Varela</li>
+		<li> Annabel Wen</li>
+		<li>Hiyab Gebreegziabher</li>
+        <li>Hyewon Kang</li>
+        <li>Areesha Imtiaz</li>
+	</ul>
+
+	<h2>About the Project</h2>
+	<img src="images\slp\2023\sheLearnsss.png" alt="shelearns pic" width="800" height="450" style="background-size: contain;">
+	<br><br>
+	<p><a href="https://drive.google.com/file/d/1fHeT4rCErhC3_B0Sjj6LloBgtcapGutz/view?usp=sharing " target="_blank">Video Demo</a> </p>
+		<p><a href="https://github.com/zhouAthalia/discordBot" target="_blank">Github</a></p>
+
+    sheCodes Discord Bot to have more control over it and can make it more consistent! Bot features included 
+    welcome message, a tic tac toe game, an economy game, anime GIFs, wanted posters, and a Tetris game!
+
+	<br>
+	<br>
+	Roles/Responsibilities:<br>
+	<br>Lead <br>
+    <ul>
+    <li>Athalia: Welcome message</li>
+    </ul>
+    Members<br>
+    <ul>
+        <li>Damian: Tic tac toe game</li>
+        <li>Annabel: Economy game</li>
+        <li>Hiyab: Anime GIFs</li>
+        <li>Hyewon: Wanted posters</li>
+        <li>Areesha: Tetris game</li>
+    </ul> 
+
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>Python</li>
+		<li>Discord</li>
+		<li>VS Code</li>
+        <li>Git/Github</li>
+
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Using Python</li>
+			<li>Compatibility issues with MacOS</li>
+        <li>Discord Token Security </li>
+	</ul> 
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Gained experience working with Python and Discord Bots</li>
+		<li>Gained insight into working with Discord as a platform</li>
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Expand features on the bot</li>
+        <li>Increase the speed of the Tetris game</li>
+        <li>Grow economy game’s features </li>
+        <li>Looking for a hosting platform</li>
+        <li>Combining files</li>
+        <li>Possible art contest </li>
+		
+	</ul>
+</div>
+
+<div id="group2" class="tabcontent">
+	<div class="projectTitle"><h1>Letters2U<br /><span>UI/UX Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Kenia Velasco</h4></li>
+		<li>Aiah Valera</li>
+		<li>Sarah Abdeen</li>
+		<li>Ally Nguyen</li>
+		<li>Michelle Paino</li>
+		<li>Zelda Perez</li>
+		<li>Amanda Huang</li>
+
+	</ul>
+	<h2>About the Project</h2>
+	<img src="images\slp\2023\hackstreet.png" width="800" height="450" style="background-size: contain;">
+	<br><br>
+	<p><a href="https://drive.google.com/file/d/1RG2yxKu4KkP6qU-Pkn9AG_5r9kgEltwm/view?usp=sharing" target="_blank">Video Demo Desktop App</a> </p>
+	<p><a href="https://drive.google.com/file/d/1pQUhh3ZegYt7zFIiNa0iXi3mnaaUo5Fp/view?usp=sharing" target="_blank">Video Demo Mobile App</a> </p>
+	<p><a href="https://www.figma.com/design/3c8IElXYLvL8tfqlW1nElO/Website-Wireframe?node-id=0-1 " target="_blank">Figma Desktop App</a></p>
+	<p><a href="https://www.figma.com/design/jOdUh8zi8bcWdorWEzheyA/Letters2U?node-id=0-1&p=f" target="_blank">Figma Mobile App</a></p>
+
+	An application that allows users to share mindful letters with others! Letters2U aims to create a less overwhelming experience that prioritizes written content between users. 
+
+	<br>
+	<br>
+	Roles/Responsibilities:<br></p>
+	Lead:
+		<li>Kenia (Mobile App Team)</li>
+</p>
+	Members: 
+		<li>Mobile App Team: Michelle, Sarah, Ally</li>
+		<li>Desktop App Team: Aiah, Zelda, Amanda</li>
+
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>Figma</li>
+		<li>Discord</li>
+		<li>Zoom</li>
+        <li>Google Docs</li>
+		<li>Procreate</li>
+
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Consistency through both projects</li>
+		<li>Nailing down specific design choices and clarity on why we were making them</li>
+		<li>Keeping accessibility in mind for future implementations</li>
+
+	</ul> 
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>UI/UX Frameworks</li>
+		<li>Working in a Team</li>
+		<li>Figma Prototyping</li>
+
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Polish up certain features and more research on UI/UX</li>
+		<li>Code a low-fidelity with functionality </li>
+	</ul>
+</div>
+
+<div id="group3" class="tabcontent">
+	<div class="projectTitle"><h1>Moodz<br /><span>Full Stack Development Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Erika Ledesma</h4></li>
+		<li><h4>Mohraiel Matta</h4></li>
+		<li>Amber Ellis</li>
+		<li>Katie Pham</li>
+		<li>Justin Ha</li>
+		<li>Louisa (Janet) Auwlia</li>
+		<li>Melody Duong</li>
+		<li>Scott Lee</li>
+		<li>Denise Thuong</li>
+		<li>Sarah To</li>
+
+	</ul>
+	<h2>About the Project</h2>
+	<img src="images\slp\2023\mixtify.png"  width="200" height="400" style="background-size: contain;">
+	<br><br>
+	<p><a href="https://moodz-c88e6d62bced.herokuapp.com/login " target="_blank">Video Demo</a> </p>
+	<p><a href="https://github.com/Full-Stack-sheCodes-24" target="_blank">GitHub Link</a></p>
+
+	Moodz combines music and journaling to create a meaningful way of reflecting on emotions over time.
+	<br>
+	<br>
+	Roles/Responsibilities:<br></p>
+	Lead:
+	<ul>
+		<li>Erika: Worked with Spotify API to grab preview URL and used an HTML audio tag to play the preview; Refactored song search bar; Animated icon when audio is played and paused</li>
+		<li>Mo: Code Review, Project Management, Styling, Displaying preview audio for entries, Creating entry modal</li>
+	</ul>
+</p>
+	Members: 
+	<ul>
+		<li>Melody: Spotify authentication; logout/delete entry functions, logout pop-up</li>
+		<li>Scott: Initial backend project setup; JWT authentication; Optimized song search bar; Backend API endpoints for entries; Confirmation dialog when deleting entries; Spotify API authentication</li>
+		<li>Katie: Design styling; Project Management; Styling; Authentication Page, Entry Formatting</li>
+		<li>Janet: Logo design; Display artist in the preview; Refactored search results; Navigation Bar; About Us Page</li>
+		<li>Sarah: Calendar; Editing profile; Background image; Spotify user access token swapping for API calls</li>
+		<li>Denise: Post button functionality and for post entries to show up on frontend</li>
+		<li>Amber: Post API endpoint for user authentication; Created a custom font and reformatted entries; Post button functionality</li>
+		<li>Justin: Set up frontend and backend architecture, Set up OAuth flow using JWT tokens for frontend and backend communication, Used MongoDB aggregation pipelines to build personalized social media feed and search results for adding other users as friends, Used Docker to deploy app to a service such as Heroku</li>
+	</ul>
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>Frontend: Vue.js, Figma, Canva</li>
+		<li>Backend: ASP.NET (C#), MongoDB</li>
+		<li>Agile Development: GitHub, Azure DevOps, Discord</li>
+
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Running our backend API on Mac</li>
+		<li>Understanding the tech stack flow with Spotify API</li>
+
+	</ul> 
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Agile Development</li>
+		<li>Azure DevOps</li>
+		<li>First time using Spotify web API for most of us</li>
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Notification functionality to include friend requests</li>
+		<ul>
+			<li>Ability to add or reject requests from navbar notif button</li>
+		</ul>
+		<li>Deployment</li>
+		<ul>
+			<li>We already deployed our full stack project but we haven’t deployed our Spotify dev app so it only allows our members on the Spotify dev app to login</li>
+		</ul>
+		<li>Personalization</li>
+		<ul>
+			<li>Uploading their own wallpaper to make it their safe space journal!</li>
+			<li>Uploading images in an entry to enhance the user’s experience with the app :D/li>
+			<li>Editing an entry</li>
+		</ul>
+	</ul>
+</div>
+
+<div id="group4" class="tabcontent">
+	<div class="projectTitle"><h1>Lane Detection<br /><span> Artificial Intelligence Team/span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Hasti Abbasi</h4></li>
+		<li><h4>Isabelle Guevara</h4></li>
+		<li>Kripa Sigdel</li>
+		<li>Sonia Pandey</li>
+		<li>Vanisa Suadprathon</li>
+		<li>Amelie Carillo</li>
+		<li>Arriana Flores</li>
+		<li>Lacey Nguyen</li>
+	</ul>
+	<h2>About the Project</h2>
+	<img src="images\slp\2023\CPP_Planner.png" width="800" height="450" style="background-size: contain;">
+	<br><br>
+	<p><a href="https://drive.google.com/file/d/1nbE9Pp3-by-zwUU9CFV73VPrTh8HGi3F/view?usp=sharing" target="_blank">Video Demo</a> </p>
+	<p><a href="https://github.com/IsabelleGueva/AI-Lane-Detection" target="_blank">Github Link</a></p>
+
+	Computer vision algorithm to detect lane line markings on the roads
+	<br>
+	<br>
+	Roles/Responsibilities:<br></p>
+	Lead:
+		<li>Hasti: Backend Dev, Image Combination</li>
+		<li>Isabelle: Hough Transform Coordination</li>
+</p>
+	Members: 
+		<li>Kripa: Region of Interest Function, Figma Prototype</li>
+		<li>Sonia: Image/Video Preprocessing, Gaussian Blur, Figma Prototype</li>
+		<li>Vanisa: Greyscale Conversion, Edge Detection</li>
+		<li>Amelie: Greyscale Conversion, Edge Detection</li>
+		<li>Arriana: Figma Prototype</li>
+		<li>Lacey: Backend Dev</li>
+
+
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>Python</li>
+		<li>Figma</li>
+		<li>VS Code</li>
+        <li>Github</li>
+
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Difficulty coordinating the Figma interface with the Python/OpenCV backend due to lack of time and experience with integration</li>
+		<li>Insufficient time to test the program on various/ambiguous road conditions, such as faded markings, nighttime lighting, or construction zones</li>
+		<li>Managing contributions from multiple team members while ensuring consistent code quality and sticking to a unified version</li>
+		<li>Adapting to Python, OpenCV, GitHub, and Figma, which were new to some team members, led to slower progress initially</li>
+		<li>Balancing project work with other academic and club responsibilities limited the depth of implementation and testing</li>
+		<li>Ensuring everyone was comfortable with GitHub (e.g., pull requests and branch management) required additional effort</li>
+	</ul> 
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Project planning and time management</li>
+		<li>Learned technologies and methods of communication to complete the project
+			<ul>
+				<li>Python</li>
+				<li>OpenCV library</li>
+				<li>Figma</li>
+				<li>GitHub functions and best practices
+					<ul>
+						<li>Coding as a team</li>
+						<li>Collaborative efforts</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Integrated Frontend and Backend: Connect the Figma interface with the backend to create a functional web or mobile app</li>
+		<li>User Experience Enhancements: Add smoother transitions / clear instructions / better design for a more intuitive interface</li>
+		<li>Expanded Testing: Test on diverse datasets, including rural roads, urban intersections, and challenging conditions like rain or low lighting</li>
+		<li>Improved Algorithm: Enhance lane detection to handle ambiguous scenarios such as faded markings and construction zones</li>
+		<li>Performance Optimization: Reduce processing time for videos and improve efficiency for larger files</li>
+		<li>Real-World Applications: Explore live camera feed processing for potential real-time lane detection use cases</li>
+	</ul>
+</div>
+
+<div id="group5" class="tabcontent">
+	<div class="projectTitle"><h1>Password Analyzer<br /><span>Cybersecurity Team</span></h1></div>
+	<a href="https://www.freepik.com/free-photo/ai-technology-brain-background-digital-transformation-concept_17122619.htm#query=Artificial%20Intelligence&position=0&from_view=search&track=sph">Cover image by Rawpixel.com</a> on Freepik
+	<br><br>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Medha Swarnachandrabalaji</h4></li>
+		<li>Josephine Villar</li>
+		<li>Valeria Urzua</li>
+		<li>Sara Downing</li>
+		<li>Ashley Mapes</li>
+		<li>Mandy Ly</li>
+	</ul>
+	<h2>About the Project</h2>
+	<img src="images\slp\2023\Jukeboxd.png" width="800" height="450" style="background-size: contain;">
+	<br><br>
+	<p><a href="https://youtu.be/VJIERZDIl6s" target="_blank">Video Demo</a> </p>
+	<p><a href="https://github.com/MedhaS1/Cyber-SLP-2024" target="_blank">Github Link</a></p>
+
+
+	Analyze a user’s password based on criteria and give them a report of the strength of their password and/or a better password if their password isn’t strong 
+	<br>
+	<br>
+	Roles/Responsibilities:<br></p>
+	Lead:
+	<ul>
+		<li>Medha: project management, putting code together, code that checks if password is common and tells user if it is</li>
+	</ul>
+</p>
+	Members: 
+	<ul>
+		<li>Josie: code to see if the password has any special characters</li>
+		<li>Valeria: code to see if the password has 12+ characters and at least one capital letter</li>
+		<li>Sara: code to see if password has at least one lowercase letter and at least one number</li>
+		<li>Ashley: code to make a strong password and encrypt the inputted password</li>
+		<li>Mandy: code to ask the users questions about their password and check if the user uses two or more of the same characters in a row, flask implementation, putting the code together</li>
+	</ul>
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>Python</li>
+		<li>VS Code</li>
+		<li>Github</li>
+		<li>Git</li>
+		<li>Github Desktop</li>
+		<li>Flask/Jinja</li>
+
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Learning Python with no experience beforehand</li>
+		<li>Downloading Git on MacOS</li>
+		<li>Handling edge cases</li>
+		<li>Learning about new libraries</li>
+		<li>Working through bugs</li>
+
+	</ul> 
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Learned Python and other tools within the project (e.g. GitHub/Git)</li>
+		<li>Learned how to analyze and identify password weaknesses</li>
+		<li>Gained insight into creating user-friendly password analysis</li>
+		<li>Enhance understanding of cybersecurity fundamentals, such as password strength metrics and user data security </li>
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Add more layers of security to the encryption and decryption using a public key encryption instead of symmetric </li>
+		<li>Add a scoring system of the user’s password (ex. weak, moderate, strong)</li>
+		<li>Given feedback as users type in the password</li>
+		<li>Add code to support multiple human languages so larger audience could use the tool</li>
+	</ul>
+</div>
+
+<div id="group6" class="tabcontent">
+	<div class="projectTitle"><h1>Echoes of Art<br /><span>Web Development Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Julia Chaidez</h4></li>
+		<li><h4>Michelle Solares</h4></li>
+		<li>Roshan Karimi</li>
+		<li>Mayela Ancheta</li>
+		<li>Katelyn Mijares</li>
+		<li>Melissa Gio </li>
+
+	</ul>
+	<h2>About the Project</h2>
+	<img src="images\slp\2023\skinScare.png"  width="800" height="450" style="background-size: contain;">
+	<br><br>
+	<p><a href="https://youtu.be/UGxQvNVa5OE?si=0Li5zs4dI85vVLFX" target="_blank">Video Demo</a> </p>
+	<p><a href="https://github.com/juliachaidez3/WEBDEV_SLP2024" target="_blank">Github Link</a></p>
+
+	The website is to showcase art pieces. It lets users explore and learn about different artworks, art movements, and artists. The goal is to make art exciting and accessible, not to sell or advertise art but to provide a beautiful and educational experience for visitors. 
+	<br>
+	<br>
+	Roles/Responsibilities:<br></p>
+	Leads:</p>
+		Julia:
+		<li>Project coordination, decision-making, and overall direction</li>
+	Members: </p>
+		<li>Javascript and Interactivity: Michelle and Melissa
+			<ul>
+				<li>Responsible for coding interactive features and user interactions</li>
+			</ul>
+		</li>
+		<li>Styling and Layout: Roshan and Mayela
+			<ul>
+				<li>Focused on visual design, ensuring user interface is aesthetically pleasing and functional</li>
+			</ul>
+		</li>
+		<li>Accessibility and Testing: Katelyn
+			<ul>
+				<li>Ensured the site was accessible and tested for usability </li>
+			</ul>
+		</li>
+
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>Figma</li>
+		<li>HTML/CSS/JavaScript</li>
+		<li>Github</li>
+        <li>Jest</li>
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Translating Figma designs to responsive code</li>
+		<li>Balancing aesthetics with functionality  </li>
+
+	</ul> 
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Gained hands-on experience with JavaScript to enhance user interactivity </li>
+		<li>Seeing the static Figma designs come alive as functional, interactive web pages</li>
+		<li>Feel more confident to translate designs into responsive, interactive web pages</li>
+		<li>Working with teammates improved problem-solving, communication, and technical skills</li>
+
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Search/Sort</li>
+		<li>Like Button</li>
+		<li>Sign Up</li>
+	</ul>
+</div>
+
+<div id="group7" class="tabcontent">
+	<div class="projectTitle"><h1>Memory Vault<br /><span>iOS Mobile App Team</span></h1></div>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Alison Ching</h4></li>
+		<li>Caitlyn Hue</li>
+		<li>Heather Trombley</li>
+		<li>Sarah Acosta</li>
+		<li>Cynthia Nguyen</li>
+		<li>Elsa Zheng</li>
+		<li>Meredith Toledo</li>
+
+
+	</ul>
+	<h2>About the Project</h2>
+	<img src="images\slp\2023\webport.png" width="800" height="450" style="background-size: contain;">
+	<br><br>
+	<p><a href="https://drive.google.com/file/d/1d9bHpwRkyr66LwT4AuQyLCNKNTuJ46-L/view?usp=sharing" target="_blank">Video Demo</a> </p>
+	<p><a href="https://github.com/alisoneching/MemoryVault.git" target="_blank">Github Link</a></p>
+
+	Capture and share memories through time capsules! The app allows you to customize with photos, videos, text, etc, notifications when capsules are ready to open, and allows you to share and collaborate with friends. 
+	<br>
+	<br>
+	Roles/Responsibilities:<br></p>
+	Lead:</p>
+	Backend: Alison
+	<ul></ul>
+		<li>Prototyping, App Functions, Basic Screens</li>
+	</ul>
+</p>
+	Members:</p>
+		Frontend: Caitlyn, Heather, Sarah
+		<li>Caitlyn: App Prototype, Wireframe, Slides</li>
+		<li>Heather:  App Prototype, Wireframe, Concepts and theme</li>
+		<li>Sarah: App Prototype, Wireframe, Icons</li>
+
+		Backend: Cynthia, Elsa, Meredith
+		<li>Cynthia: Wireframing, Implementing app UI</li>
+		<li>Elsa: Prototyping, App Functions, More Screens</li>
+		<li>Meredith: Prototyping, Wireframing, Verifying functionality </li>
+
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>Figma</li>
+		<li>XCode</li>
+		<li>Swift UI</li>
+        <li>Github</li>
+		<li>Discord</li>
+		<li>Google Docs</li>
+
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Machine Issues
+			<ul>
+				<li>Many members did not own a MacBook to run Swift UI and Xcode and had a difficult time using a virtual machine.</li>
+			</ul>
+		</li>
+		<li>Time Constraints
+			<ul>
+				<li>Due to scheduling conflicts and countless features we wanted to add, we did not have enough time to collaborate and implement everything in mind.</li>
+			</ul>
+		</li>
+		<li>Experience with Firebase
+			<ul>
+				<li>Most of the team did not have experience with Firebase, making it a learning process to use and difficult to connect the database to the app. </li>
+			</ul>
+		</li>
+	</ul> 
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Gained more experience in the frontend and backend aspects of app development, including working with Xcode and Swift UI</li>
+		<li>Interested in pursuing Cloud storage for pictures and videos</li>
+	</ul>
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Perfect project and implement Firebase</li>
+	</ul>
+</div>
+
+<div id="group8" class="tabcontent">
+	<div class="projectTitle"><h1>Cybersecurity & UI/UX<br /><span>Intro To Coding Team</span></h1></div>
+	<a href="https://www.freepik.com/free-vector/data-extraction-concept-illustration_12079896.htm#query=machine%20learning&position=21&from_view=search&track=sph">Cover image by storyset</a> on Freepik
+	<br><br>
+	<h2>Team Introduction</h2>
+	<ul>
+		<li><h4>Alison Fung</h4></li>
+		<li><h4>Lesly Ibarra</h4></li>
+		<li>Caoilainn Johnsson (CJ)</li>
+		<li>Janice Lachan</li>
+		<li>Marianne Goce</li>
+		<li>Tina Arezoomanians</li>
+		<li>Elijah Harnanto</li>
+		<li>Sayumi Amarasinghe</li>
+		<li>Sarah Huynh</li>
+	</ul>
+
+	<h2>About the Project</h2>
+	<img src="images\slp\2023\introdisc.png" width="500" height="450" style="background-size: contain;">
+	<img src="images\slp\2023\introgame.png" width="300" height="300" style="background-size: contain;">
+
+	<br><br>
+	<p><a href="https://youtu.be/T4udxlBBRt4" target="_blank">Cybersecurity Video Demo</a> </p>
+	<p><a href="https://youtu.be/PUAG-kmxxlY" target="_blank">UI/UX Video Demo</a> </p>
+
+	<p><a href="https://github.com/alisonfung/post-it-board" target="_blank">Cybersecurity GitHub Link</a></p>
+	<p><a href="https://github.com/leslydibarra/IntroToCoding_Cybersecurity/branches" target="_blank">UI/UX GitHub Link</a></p>
+
+
+	Split into two mini-teams with focused topics depending on member’s interests: Cybersecurity & UI/UX!
+	Cybersecurity: Personalized Password Manager
+	UI/UX: Virtual post-it board for users to keep track of important due dates and events
+
+	<br>
+	<br>
+	Roles/Responsibilities:<br></p>
+	Leads:
+		<li>Alison (UI/UX Team)</li>
+		<li>Lesly (Cybersecurity Team)</li>
+</p>
+	Members: 
+		<li>Cybersecurity Team: CJ, Janice, Marianne</li>
+		<li>UI/UX Team
+			<ul>
+				<li>Design Team: Sarah, Elijah</li>
+				<li>Coding Team: Tina, Sayumi</li>
+			</ul>
+		</li>
+		
+
+
+	<br>
+
+	<h2>Tools</h2>
+	<ul>
+		<li>Cybersecurity
+			<ul>
+				<li>Python</li>
+				<li>Vs Code</li>
+				<li>Wireshark</li>
+				<li>Github</li>
+				<li>Code Academy</li>
+			</ul>
+		</li>
+		<li>UI/UX
+			<ul>
+				<li>Figma</li>
+				<li>Github</li>
+				<li>Discord</li>
+				<li>HTML/CSS/JavaScript</li>
+			</ul>
+		</li>
+
+	</ul>
+
+	<h2>Challenges</h2>
+	<ul>
+		<li>Cybersecurity
+			<ul>
+				<li>Limited time to add more features</li>
+			</ul>
+		</li>
+		<li>UI/UX
+			<ul>
+				<li>Design Team: Toolbar, Overlay-prototyping; Learning and navigating Figma</li>
+				<li>Coding Team: Creating an overlay and implementing its functionality to add, save, and edit post-its (referencing tutorials, event handlers); Formatting post-it layout across the page using Flexbox</li>
+			</ul>
+		</li>
+	</ul> 
+
+	<h2>What Was Learned</h2>
+	<ul>
+		<li>Cybersecurity
+			<ul>
+				<li>Learned how to successfully create own Personal Password Manager</li>
+				<li>Basics of Python, RSA key encryption, and WireShark before applying to the project</li>
+			</ul>
+		</li>
+		<li>UI/UX
+			<ul>
+				<li>User-friendly/interactive design </li>
+				<li>Learning design in Figma</li>
+				<li>Cross-communication between design and programming teams & how to split up tasks</li>
+				<li>Website programming and enjoying working in a group</li>
+			</ul>
+		</li>
+	</ul> 
+
+	<h2>Given More Time...</h2>
+	<ul>
+		<li>Cybersecurity
+			<ul>
+				<li>Future implementation of more features within each personal password manager </li>
+			</ul>
+		</li>
+		<li>UI/UX
+			<ul>
+				<li>Calendar view with reminder due dates</li>
+				<li>Store a user’s post-its in cookies or implement some sort of login method so that they could return to their previous post-its</li>
+			</ul>
+		</li>
+	</ul> 
+</div>
+</div> <!--content-->
+
+</div> <!--bootstrap-->
+
+
+<!--CREDIT-->
+<div id="creditDesktop" class="d-none d-md-block">
+	<div id="anchor">
+		<div style="margin-top: -3px;"><i class="fas fa-anchor"></i></div>
+	</div>
+	<div id="4thMonth">
+		<div style="font-size: 10pt; padding-top: 10px;">Coded with care by Mohraiel</div>
+	</div>
+</div>
+
+<div id="creditMobile" class="d-none d-sm-block d-sm-none d-md-none d-lg-none d-xl-none">
+	� 2023 <a href="https://www.cpp.edu/~shecodes/">sheCodes</a>
+	<br />
+	<small>Coded with SLAY by Mohraiel</small>
+</div>
+
+<div id="creditMobile" class="d-block d-sm-none">
+	� 2023 <a href="https://www.cpp.edu/~shecodes/">sheCodes</a>
+	<br />
+	<small>Coded with SLAY by Mohraiel</small>
+</div>
+
+</body>
+
+<!--Javascript-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!--javascript for the separate tabs-->
+<script type="text/javascript">
+	function openPage(evt, cityName) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+</script>
+
+</body>
+</html>
