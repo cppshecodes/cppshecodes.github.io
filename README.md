@@ -9,7 +9,7 @@ Link : https://www.cppshecodes.com/
   <img src="https://www.cppshecodes.com/images/logo.png" alt="sheCodes Icon" style="width: 50px; height: 50px;" />
 </a>
 
-## Current Webmaster (2025-2025)
+## Current Webmaster (2025-2026)
 [Chau Nguyen Developer](https://github.com/Chau-Nguyen-Developer)
 
 ## :man_astronaut: Check out ways to stay connected!
