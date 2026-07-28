@@ -298,7 +298,7 @@
   /* qr code image sizing */
   .qr-img {
 	display: flex;
-	max-width: 20%;
+	max-width: 50%;
 	height: auto;
   }
 
