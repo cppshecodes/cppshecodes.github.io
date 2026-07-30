@@ -298,6 +298,7 @@
   /* qr code image sizing */
   .qr-img {
 	display: flex;
+	align-items: center;
 	max-width: 50%;
 	height: auto;
   }
